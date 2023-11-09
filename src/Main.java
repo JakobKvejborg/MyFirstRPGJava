@@ -195,7 +195,7 @@ public class Main {
         items1.add(new Item(0, 2, 2, "Armor", "Armor", 0, 8, 0, 0, 0));
         items1.add(new Item(1, 2, 1, "Bracers of Health", "Bracers", 0, 2, 0, 0, 0));
         items1.add(new Item(0, 3, 0, "Amulet of Magic", "Amulet", 0, 2, 2, 0, 0));
-        items1.add(new Item(0, 1, 0, "Small Dagger of Lifesteal RH", "WeaponR1", 0, 0, 0, 2, 20));
+        items1.add(new Item(0, 1, 0, "Small Dagger of Lifesteal RH", "WeaponR1", 0, 0, 0, 2, 13));
         items1.add(new Item(0, 2, 0, "Longsword of Rust LH", "WeaponL1", 0, 0, 0, 2, 0));
         items1.add(new Item(0, 4, 0, "Ring of Lifesteal R2", "Ring2", 0, 0, 0, 0, 12));
         items1.add(new Item(0, 1, 0, "Small Knife LH", "WeaponL1", 0, 0, 0, 1, 5));
@@ -870,7 +870,7 @@ public class Main {
             WarlordFrame imageAct2Boss = null;
             int optionThreeSelected2 = 0;
             int crossRoadsI2 = 0; // ensures message "you continue" doesn't play the first time around
-            boolean firstTimeMessag2 = true;
+            boolean firstTimeMessage2 = true;
             int count2 = 0;
             while (optionThreeSelected2 < 1) {
                 boolean validChoice = false;
@@ -895,7 +895,7 @@ public class Main {
                             // open inventory outside battle
                             case "i":
                                 // Open the character's inventory
-                                inventoryObject.handleInventoryInteraction();
+                                inventoryObject.InventoryOverall();
                                 break;
                             // _________
                             case "1":
@@ -1014,7 +1014,7 @@ public class Main {
                             // open inventory outside battle
                             case "i":
                                 // Open the character's inventory
-                                inventoryObject.handleInventoryInteraction();
+                                inventoryObject.InventoryOverall();
                                 break;
                             // _________
                             case "1":
@@ -1137,7 +1137,7 @@ public class Main {
                             // open inventory outside battle
                             case "i":
                                 // Open the character's inventory
-                                inventoryObject.handleInventoryInteraction();
+                                inventoryObject.InventoryOverall();
                                 break;
                             // _________
                             case "1":
