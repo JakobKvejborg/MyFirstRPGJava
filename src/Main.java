@@ -870,7 +870,7 @@ public class Main {
             WarlordFrame imageAct2Boss = null;
             int optionThreeSelected2 = 0;
             int crossRoadsI2 = 0; // ensures message "you continue" doesn't play the first time around
-            boolean firstTimeMessage2 = true;
+            boolean firstTimeMessag2 = true;
             int count2 = 0;
             while (optionThreeSelected2 < 1) {
                 boolean validChoice = false;
