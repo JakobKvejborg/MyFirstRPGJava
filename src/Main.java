@@ -895,7 +895,7 @@ public class Main {
                             // open inventory outside battle
                             case "i":
                                 // Open the character's inventory
-                                inventoryObject.handleInventoryInteraction();
+                                inventoryObject.InventoryOverall();
                                 break;
                             // _________
                             case "1":
@@ -1014,7 +1014,7 @@ public class Main {
                             // open inventory outside battle
                             case "i":
                                 // Open the character's inventory
-                                inventoryObject.handleInventoryInteraction();
+                                inventoryObject.InventoryOverall();
                                 break;
                             // _________
                             case "1":
@@ -1137,7 +1137,7 @@ public class Main {
                             // open inventory outside battle
                             case "i":
                                 // Open the character's inventory
-                                inventoryObject.handleInventoryInteraction();
+                                inventoryObject.InventoryOverall();
                                 break;
                             // _________
                             case "1":
