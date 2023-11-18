@@ -6,7 +6,7 @@ public class Encounter {
     private ArrayList<Item> items;
     static Random randomDamageAdd1 = new Random();
     public static int randomDamageHej1 = randomDamageAdd1.nextInt(11) - 5;
-    private List<Item> inventory;  // No need to initialize here
+    private List<Item> inventory;
     private InventoryClass inventoryObject;
 
     Scanner scanner = new Scanner(System.in);
@@ -157,7 +157,7 @@ public class Encounter {
 
     //__________________________________________________________
 
-//    MONSTER DAMAGE MODIFIER BASED ON NAME
+    //    MONSTER DAMAGE MODIFIER BASED ON NAME
     public int calculateMonsterDamage(Monster monster, String monsterNameLowerCase) {
         int baseMonsterDamage = monster.getMonsterAttack();
 
@@ -179,6 +179,28 @@ public class Encounter {
         }
 
         return baseMonsterDamage + randomDamageModifier;
+    }
+
+//    ________________________________________________________________
+
+    //    MONSTER DEALS DAMAGE METHOD
+    public void monsterDealsDamage(Monster monster, int playerHealth) {
+        String monsterNameLowerCase = monster.getMonsterName().toLowerCase();
+        int enemyDamage = calculateMonsterDamage(monster, monsterNameLowerCase) - character.getCharDefense();
+        int enemyDamageRaw = calculateMonsterDamage(monster, monsterNameLowerCase); // because enemyDamage can be negative if the player denfense is high
+
+
+        if (enemyDamage > 0) {
+            System.out.println("The enemy attacks you and deals " + enemyDamageRaw + " damage.");
+            System.out.println("Your armor blocks " + character.getCharDefense() + " damage.");
+            playerHealth = playerHealth - enemyDamage;
+            character.charHealth = playerHealth;
+
+            System.out.println(character.getCharName() + getHealthColor(playerHealth) + " (" + playerHealth + ")" + resetColor);     // the 'if' statement is armor-based
+        } else {  // PLAYER ARMOR IS HIGHER THAN ENEMY'S DAMAGE
+            System.out.println("The enemy can't penetrate your armor, you block all " + enemyDamageRaw + " damage.");
+            System.out.println(character.getCharName() + getHealthColor(playerHealth) + " (" + playerHealth + ")" + resetColor);
+        }
     }
 
     //_________________________________________________
@@ -214,7 +236,7 @@ public class Encounter {
 
             switch (combatOptions) {
                 case "a":       // PLAYER ATTACKS & DEALS DAMAGE
-                    int playerDamage = 1 + (character.getItemAttack() + character.getItemStrength()) * ((character.charLevel + 2) / 4);
+                    int playerDamage = character.getCharLevel() + character.getItemStrength() + (character.getItemAttack() * (1 + (character.getCharLevel() / 8)));
                     System.out.println("You attack and deal " + playerDamage + " damage.");
                     System.out.println();
                     enemyHealth -= playerDamage;
@@ -242,33 +264,13 @@ public class Encounter {
 
                     System.out.println(encounteredMonster.getMonsterName() + getMonsterHealthColor(enemyHealth) + " (" + enemyHealth + ")" + resetColor);
 
-
-                    if (enemyHealth <= 0) {  // MONSTER IS DEFEATED, ITEM FIND INSIDE MONSTERDEFEATED METHOD
+                    // MONSTER IS DEFEATED, ITEM FIND INSIDE MONSTERDEFEATED METHOD
+                    if (enemyHealth <= 0) {
                         monsterDefeated(encounteredMonster, randomMonsterIndex);
 
                         break;
                     } else {
-
-                        //_______________________________________________________________________________________
-
-                        // MONSTER DEALS DAMAGE
-                        String monsterNameLowerCase = encounteredMonster.getMonsterName().toLowerCase();
-                        int enemyDamage = calculateMonsterDamage(encounteredMonster, monsterNameLowerCase) - character.getCharDefense();
-                        int enemyDamageRaw = calculateMonsterDamage(encounteredMonster, monsterNameLowerCase); // because enemyDamage can be negative if the player denfense is high
-
-
-
-                        if (enemyDamage > 0) {
-                            System.out.println("The enemy attacks you and deals " + enemyDamageRaw + " damage.");
-                            System.out.println("Your armor blocks " + character.getCharDefense() + " damage.");
-                            playerHealth = playerHealth - enemyDamage;
-                            character.charHealth = playerHealth;
-
-                            System.out.println(character.getCharName() + getHealthColor(playerHealth) + " (" + playerHealth + ")" + resetColor);     // the 'if' statement is armor-based
-                        } else {  // PLAYER ARMOR IS HIGHER THAN ENEMY'S DAMAGE
-                            System.out.println("The enemy can't penetrate your armor, you block all " + enemyDamageRaw + " damage.");
-                            System.out.println(character.getCharName() + getHealthColor(playerHealth) + " (" + playerHealth + ")" + resetColor);
-                        }
+                        monsterDealsDamage(encounteredMonster, playerHealth);
                     }
 
 
@@ -326,13 +328,13 @@ public class Encounter {
 
                     System.out.println("You wave your hands, muttering forbidden words - and cast your spell!");
                     System.out.println("Your magic heals you " + greenColor + itemMagic + resetColor + " hp.");
-                    playerHealth = character.charHealth; // ???????????
+                    playerHealth = character.charHealth; // updates player hp
 
                     if (playerHealth > character.getCharMaxHealth()) {
                         playerHealth = character.getCharMaxHealth(); // Ensure player health doesn't exceed maximum
                     }
 
-                    printCombatOptions();
+//                    printCombatOptions();
 
 
 //
@@ -350,27 +352,17 @@ public class Encounter {
                         break;
 
                     } else {  // MONSTER ATTACKS (when magic is used)
-                        if (enemyDamageM > 0) {
-                            System.out.println("The enemy attacks you and deals " + enemyDamageRawM + " damage.");
-                            System.out.println("Your armor blocks " + character.getCharDefense() + " damage.");
-                            playerHealth = playerHealth - enemyDamageM;
-                            character.charHealth = playerHealth;
-                            System.out.println(character.getCharName() + getHealthColor(playerHealth) + " (" + playerHealth + ")" + resetColor);
-                        } else {
-                            System.out.println("Your armor is a fortress, it blocks all " + enemyDamageRawM + " damage!");
-                            System.out.println(character.getCharName() + getHealthColor(playerHealth) + " (" + playerHealth + ")" + resetColor);
+                        monsterDealsDamage(encounteredMonster, playerHealth);
+
+                        if (playerHealth <= 0) {   // PLAYER DIES
+                            System.out.println();
+                            System.out.println("You were defeated. Your ashes will be scattered across the land but your name will be forgotten. Game Over.");
+                            System.exit(0);
+                            break;
                         }
-
-                    }
-
-                    if (playerHealth <= 0) {   // PLAYER DIES
-                        System.out.println();
-                        System.out.println("You were defeated. Your ashes will be scattered across the land but your name will be forgotten. Game Over.");
-                        System.exit(0);
+                        printCombatOptions();
                         break;
                     }
-                    printCombatOptions();
-                    break;
 
                 case "i":        // PLAYER OPENS INVENTORY
                     inventoryObject.InventoryOverall();

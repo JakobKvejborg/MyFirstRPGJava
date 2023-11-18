@@ -11,6 +11,8 @@ import javax.sound.sampled.*;
 import java.io.File;
 import java.io.IOException;
 
+// Jakob Kvejborg 18/11/23
+// 18:48
 
 public class Main {
 
@@ -78,7 +80,7 @@ public class Main {
         Monster warlordManda = new Monster(45, 12, "Warlord Manda", 20);
         Monster warlordKoold = new Monster(64, 14, "Warlord Koold", 24);
         Monster warlordYdris = new Monster(88, 18, "Warlord Ydris", 33);
-        Monster act2Boss = new Monster(666, 87, "Abaddon, Fallen Angel", 80);
+        Monster act2Boss = new Monster(666, 67, "Abaddon, Fallen Angel", 80);
         Monster act3Boss = new Monster(2000, 210, "Hidden Entity", 110);
         ArrayList<Monster> warlordMandaList = new ArrayList<>();
         warlordMandaList.add(warlordManda);
@@ -114,22 +116,23 @@ public class Main {
         monsters3.add(new Monster(56, 22, "Normal Spawn", 22));
         monsters3.add(new Monster(33, 33, "Normal Illusion", 33));
         monsters3.add(new Monster(45, 18, "Normal Cultist", 24));
+        monsters3.add(new Monster(40, 30, "Normal Beast", 40));
 
         // RANDOM MONSTER LIST (NIGHTMARE)
         ArrayList<Monster> monsters4 = new ArrayList<>();
-        monsters4.add(new Monster(57, 94, "Nightmare Flayer", 71));
-        monsters4.add(new Monster(86, 83, "Nightmare Thief", 61));
-        monsters4.add(new Monster(68, 73, "Nightmare Goblin", 61));
-        monsters4.add(new Monster(79, 82, "Nightmare Knight", 62));
-        monsters4.add(new Monster(80, 96, "Nightmare Clayer", 73));
-        monsters4.add(new Monster(110, 83, "Nightmare Golem", 54));
+        monsters4.add(new Monster(57, 94, "Nightmare Flayer", 61));
+        monsters4.add(new Monster(86, 83, "Nightmare Thief", 51));
+        monsters4.add(new Monster(68, 73, "Nightmare Goblin", 51));
+        monsters4.add(new Monster(79, 82, "Nightmare Knight", 52));
+        monsters4.add(new Monster(80, 96, "Nightmare Clayer", 63));
+        monsters4.add(new Monster(110, 83, "Nightmare Golem", 44));
         monsters4.add(new Monster(191, 63, "Nightmare Stone Golem", 45));
-        monsters4.add(new Monster(99, 64, "Nightmare Undead", 86));
-        monsters4.add(new Monster(79, 75, "Nightmare Skeleton", 97));
-        monsters4.add(new Monster(99, 64, "Nightmare Demon", 70));
-        monsters4.add(new Monster(78, 100, "Nightmare Shadow", 60));
-        monsters4.add(new Monster(91, 79, "Nightmare Lancer", 77));
-        monsters4.add(new Monster(120, 56, "Nightmare Bat", 80));
+        monsters4.add(new Monster(99, 64, "Nightmare Undead", 66));
+        monsters4.add(new Monster(79, 75, "Nightmare Skeleton", 77));
+        monsters4.add(new Monster(99, 64, "Nightmare Demon", 60));
+        monsters4.add(new Monster(78, 100, "Nightmare Shadow", 50));
+        monsters4.add(new Monster(91, 79, "Nightmare Lancer", 67));
+        monsters4.add(new Monster(120, 56, "Nightmare Bat", 70));
 
         // RANDOM MONSTER LIST (FROST)   // weak - common  - Warlords - normal - nightmare - Act2Boss - Frost - Act3Boss - elite - terror - hellish - corrupted
         ArrayList<Monster> monsters5 = new ArrayList<>();
@@ -140,32 +143,33 @@ public class Main {
 
         // RANDOM MONSTER LIST ELITES
         ArrayList<Monster> monsters6 = new ArrayList<>();  // power level of monsters1 = monsters1-99
-        monsters6.add(new Monster(1244, 222, "Elite Hellspawn", 124));
+        monsters6.add(new Monster(1244, 222, "Elite Hellspawn", 114));
         monsters6.add(new Monster(1266, 223, "Elite Warlock", 115));
-        monsters6.add(new Monster(1355, 224, "Elite Knight", 122));
+        monsters6.add(new Monster(1355, 224, "Elite Knight", 112));
         monsters6.add(new Monster(1255, 174, "Elite Lancer", 102));
-        monsters6.add(new Monster(1244, 152, "Elite Witch", 124));
+        monsters6.add(new Monster(944, 152, "Elite Witch", 114));
         monsters6.add(new Monster(1366, 183, "Elite Skeleton", 105));
-        monsters6.add(new Monster(1255, 194, "Elite Elemental", 122));
-        monsters6.add(new Monster(955, 144, "Elite Shadow", 32));
-        monsters6.add(new Monster(944, 200, "Elite Illusion", 34));
-        monsters6.add(new Monster(1033, 230, "Elite Demon", 134));
-        monsters6.add(new Monster(833, 200, "Elite Dragon", 164));
+        monsters6.add(new Monster(1255, 194, "Elite Elemental", 112));
+        monsters6.add(new Monster(955, 144, "Elite Shadow", 39));
+        monsters6.add(new Monster(944, 200, "Elite Illusion", 47));
+        monsters6.add(new Monster(1033, 230, "Elite Demon", 114));
+        monsters6.add(new Monster(1233, 200, "Elite Dragon", 124));
 
         // RANDOM MONSTER LIST TERRORS
         ArrayList<Monster> monsters7 = new ArrayList<>();  // power level of monsters1 = monsters1-99
-        monsters7.add(new Monster(1944, 202, "Terror Hellspawn", 224));
-        monsters7.add(new Monster(2066, 203, "Terror Warlock", 215));
-        monsters7.add(new Monster(1955, 204, "Terror Knight", 222));
-        monsters7.add(new Monster(2055, 154, "Terror Lancer", 202));
-        monsters7.add(new Monster(1844, 132, "Terror Witch", 224));
+        monsters7.add(new Monster(1944, 202, "Terror Hellspawn", 214));
+        monsters7.add(new Monster(2066, 203, "Terror Warlock", 205));
+        monsters7.add(new Monster(1955, 204, "Terror Knight", 212));
+        monsters7.add(new Monster(2055, 154, "Terror Lancer", 192));
+        monsters7.add(new Monster(1844, 132, "Terror Witch", 214));
         monsters7.add(new Monster(2566, 153, "Terror Skeleton", 205));
-        monsters7.add(new Monster(2455, 174, "Terror Elemental", 222));
+        monsters7.add(new Monster(2455, 174, "Terror Elemental", 212));
         monsters7.add(new Monster(2455, 124, "Terror Shadow", 182));
         monsters7.add(new Monster(2044, 180, "Terror Illusion", 134));
-        monsters7.add(new Monster(1633, 210, "Terror Demon", 234));
-        monsters7.add(new Monster(1833, 190, "Terror Dragon", 264));
+        monsters7.add(new Monster(1633, 210, "Terror Demon", 214));
+        monsters7.add(new Monster(1833, 190, "Terror Dragon", 234));
         monsters7.add(new Monster(1533, 130, "Terror Warlock", 164));
+        monsters7.add(new Monster(1500, 240, "Terror Beast", 250));
 
 
         // FINAL BOSS MONSTER LIST
@@ -195,7 +199,7 @@ public class Main {
         items1.add(new Item(0, 2, 2, "Armor", "Armor", 0, 8, 0, 0, 0));
         items1.add(new Item(1, 2, 1, "Bracers of Health", "Bracers", 0, 2, 0, 0, 0));
         items1.add(new Item(0, 3, 0, "Amulet of Magic", "Amulet", 0, 2, 2, 0, 0));
-        items1.add(new Item(0, 1, 0, "Small Dagger of Lifesteal RH", "WeaponR1", 0, 0, 0, 2, 20));
+        items1.add(new Item(0, 1, 0, "Small Dagger of Lifesteal RH", "WeaponR1", 0, 0, 0, 2, 12));
         items1.add(new Item(0, 2, 0, "Longsword of Rust LH", "WeaponL1", 0, 0, 0, 2, 0));
         items1.add(new Item(0, 4, 0, "Ring of Lifesteal R2", "Ring2", 0, 0, 0, 0, 12));
         items1.add(new Item(0, 1, 0, "Small Knife LH", "WeaponL1", 0, 0, 0, 1, 5));
@@ -203,8 +207,8 @@ public class Main {
         items1.add(new Item(0, 2, 1, "Bracers of Lifesteal", "Bracers", 0, 0, 0, 0, 10));
         items1.add(new Item(3, 2, 2, "Shoulders of Defense", "Shoulders", 0, 0, 0, 0, 0));
         items1.add(new Item(0, 1, 1, "Leggings of Health", "Leggings", 0, 5, 0, 0, 0));
-        items1.add(new Item(2, 0, 2, "Shoulders of Lifesteal", "Shoulders", 0, 0, 0, 0, 15));
-        items1.add(new Item(1, 0, 2, "Belt of Lifesteal", "Belt", 0, 0, 0, 0, 15));
+        items1.add(new Item(2, 0, 2, "Shoulders of Lifesteal", "Shoulders", 0, 0, 0, 0, 12));
+        items1.add(new Item(1, 0, 2, "Belt of Lifesteal", "Belt", 0, 0, 0, 0, 10));
         items1.add(new Item(3, 0, 1, "Shoulders of Strength", "Shoulders", 0, 0, 0, 0, 0));
         items1.add(new Item(0, 0, 0, "Small Axe RH", "WeaponR1", 0, 0, 0, 2, 0));
         items1.add(new Item(0, 0, 0, "Small Scythe RH", "WeaponR1", 0, 0, 0, 2, 5));
@@ -215,6 +219,10 @@ public class Main {
         items1.add(new Item(0, 2, 2, "Helm of Rust", "Helm", 0, 5, 0, 0, 0));
         items1.add(new Item(0, 1, 1, "Amulet of Rust", "Amulet", 0, 0, 1, 0, 0));
         items1.add(new Item(2, 0, 1, "Helm of Lifesteal", "Helm", 0, 6, 0, 0, 8));
+        items1.add(new Item(0, 0, 1, "Ring of Silver R2", "Ring2", 0, 5, 1, 0, 0));
+        items1.add(null);
+        items1.add(null);
+        items1.add(null);
         items1.add(null);
         items1.add(null);
         items1.add(null);
@@ -304,25 +312,25 @@ public class Main {
 
         // RANDOM ITEM LIST 2
         ArrayList<Item> items2 = new ArrayList<>();    // power level of items = items1-99
-        items2.add(new Item(1, 2, 6, "Helm of Defense", "Helm", 0, 2, 0, 0, 0));
-        items2.add(new Item(4, 7, 10, "Armor of Level & Health", "Armor", 1, 15, 0, 0, 0));
-        items2.add(new Item(1, 3, 0, "Ring of Health R1", "Ring1", 0, 30, 0, 0, 0));
+        items2.add(new Item(3, 2, 6, "Helm of Defense", "Helm", 0, 2, 0, 0, 0));
+        items2.add(new Item(5, 7, 10, "Armor of Level & Health", "Armor", 1, 15, 0, 0, 0));
+        items2.add(new Item(3, 3, 0, "Ring of Health R1", "Ring1", 0, 30, 0, 0, 0));
         items2.add(new Item(5, 11, 12, "Armor of Iron", "Armor", 0, 0, 0, 0, 0));
         items2.add(new Item(0, 0, 0, "Giant Axe of Life RH", "WeaponR1", 0, 0, 0, 3, 10));
-        items2.add(new Item(0, 4, 7, "Shoulders of Iron", "Shoulders", 0, 0, 0, 0, 0));
+        items2.add(new Item(2, 4, 7, "Shoulders of Iron", "Shoulders", 0, 0, 0, 0, 0));
         items2.add(new Item(0, 7, 0, "Flame Sword LH", "WeaponL1", 0, 0, 0, 4, 0));
         items2.add(new Item(0, 3, 0, "Ring of Vitality R1", "Ring1", 0, 16, 0, 0, 0));
         items2.add(new Item(0, 8, 3, "Belt of Vitality", "Belt", 0, 25, 0, 0, 0));
         items2.add(new Item(0, 8, 4, "Boots of Defense", "Boots", 0, 15, 0, 0, 0));
-        items2.add(new Item(3, 9, 5, "Bracers of Defense", "Bracers", 0, 17, 0, 0, 0));
+        items2.add(new Item(5, 9, 5, "Bracers of Defense", "Bracers", 0, 17, 0, 0, 0));
         items2.add(new Item(0, 6, 0, "Ring of Vampire R2", "Ring2", 0, 18, 0, 0, 8));
         items2.add(new Item(0, 11, 6, "Leggings of Iron", "Leggings", 0, 13, 0, 0, 0));
         items2.add(new Item(0, 5, 0, "Claymore of Gore LH", "WeaponL1", 0, 8, 0, 4, 0));
-        items2.add(new Item(5, 11, 6, "Gloves of Vitality", "Gloves", 0, 15, 0, 0, 0));
-        items2.add(new Item(0, 15, 5, "Boots of Attributes", "Boots", 0, 15, 5, 0, 10));
-        items2.add(new Item(5, 6, 8, "Helm of Iron", "Helm", 0, 0, 5, 0, 5));
+        items2.add(new Item(6, 11, 6, "Gloves of Vitality", "Gloves", 0, 15, 0, 0, 0));
+        items2.add(new Item(2, 15, 5, "Boots of Attributes", "Boots", 0, 15, 5, 0, 10));
+        items2.add(new Item(6, 6, 8, "Helm of Iron", "Helm", 0, 0, 5, 0, 5));
         items2.add(new Item(0, 10, 6, "Gloves of Health", "Gloves", 0, 30, 0, 0, 0));
-        items2.add(new Item(1, 13, 8, "Gloves of Vampire", "Gloves", 0, 0, 0, 0, 6));
+        items2.add(new Item(3, 13, 8, "Gloves of Vampire", "Gloves", 0, 0, 0, 0, 6));
         items2.add(new Item(0, 12, 0, "Flame Mace RH", "WeaponR1", 0, 0, 0, 4, 9));
         items2.add(null);
         items2.add(null);
@@ -363,10 +371,10 @@ public class Main {
 
         // ITEMS LIST WARLORD GUARANTEED DROP
         ArrayList<Item> itemsWarlords = new ArrayList<>();
-        itemsWarlords.add(new Item(2, 1, 2, "Helm of Blood", "Helm", 0, 10, 2, 0, 0));
+        itemsWarlords.add(new Item(3, 1, 2, "Helm of Blood", "Helm", 0, 10, 2, 0, 0));
         itemsWarlords.add(new Item(4, 5, 7, "Armor of Blood", "Armor", 0, 10, 4, 0, 0));
         itemsWarlords.add(new Item(2, 4, 6, "Ring of Blood R1", "Ring1", 0, 1, 3, 0, 0));
-        itemsWarlords.add(new Item(2, 3, 4, "Leggings of Blood", "Leggings", 0, 8, 1, 0, 0));
+        itemsWarlords.add(new Item(4, 3, 4, "Leggings of Blood", "Leggings", 0, 8, 1, 0, 0));
         itemsWarlords.add(new Item(3, 4, 4, "Belt of Blood", "Belt", 0, 11, 2, 0, 0));
         itemsWarlords.add(new Item(2, 5, 3, "Shoulders of Blood", "Shoulders", 0, 4, 1, 0, 0));
         itemsWarlords.add(new Item(3, 3, 3, "Boots of Blood", "Boots", 0, 0, 0, 0, 7));
@@ -378,26 +386,26 @@ public class Main {
 
         // ITEMS LIST 3
         ArrayList<Item> items3 = new ArrayList<>();    // power level of items = items1-99
-        items3.add(new Item(3, 1, 3, "Helm of Strong", "Helm", 0, 0, 5, 0, 0));
+        items3.add(new Item(8, 1, 3, "Helm of Strong", "Helm", 0, 0, 5, 0, 0));
         items3.add(new Item(5, 5, 14, "Armor of Illness", "Armor", 0, 0, 4, 0, 0));
         items3.add(new Item(1, 4, 8, "Ring of Defense R1", "Ring1", 0, 1, 3, 0, 5));
         items3.add(new Item(3, 3, 7, "Armor of Metal", "Armor", 0, 28, 4, 0, 0));
         items3.add(new Item(4, 4, 12, "Armor of Gold", "Armor", 0, 11, 2, 0, 0));
         items3.add(new Item(6, 9, 10, "Armor of Rock", "Armor", 0, 4, 4, 0, 0));
-        items3.add(new Item(4, 3, 1, "Ring of Strength R2", "Ring2", 0, 0, 0, 0, 0));
-        items3.add(new Item(0, 11, 0, "Small Dagger of Life LH", "WeaponL1", 0, 0, 0, 2, 15));
+        items3.add(new Item(5, 3, 1, "Ring of Strength R2", "Ring2", 0, 0, 0, 0, 0));
+        items3.add(new Item(0, 11, 0, "Small Dagger of Life LH", "WeaponL1", 0, 0, 0, 2, 14));
         items3.add(new Item(1, 7, 0, "Small Hammer RH", "WeaponR1", 0, 0, 0, 4, 0));
         items3.add(new Item(2, 6, 4, "Boots of Metal", "Boots", 0, 0, 0, 0, 0));
         items3.add(new Item(0, 9, 4, "Leggings of Vitality", "Leggings", 0, 23, 0, 0, 0));
         items3.add(new Item(0, 7, 0, "Amulet of Lifesteal", "Amulet", 0, 15, 0, 0, 5));
         items3.add(new Item(0, 10, 0, "Ring of Jordan R1", "Ring1", 1, 0, 0, 0, 0));
-        items3.add(new Item(0, 5, 5, "Gloves of Iron", "Gloves", 0, 0, 0, 0, 0));
-        items3.add(new Item(2, 11, 5, "Shoulders of Metal", "Shoulders", 0, 23, 0, 0, 0));
+        items3.add(new Item(0, 5, 7, "Gloves of Iron", "Gloves", 0, 0, 0, 0, 0));
+        items3.add(new Item(4, 11, 5, "Shoulders of Metal", "Shoulders", 0, 23, 0, 0, 0));
         items3.add(new Item(0, 10, 6, "Bracers of Metal", "Bracers", 0, 18, 0, 0, 0));
         items3.add(new Item(0, 8, 0, "Warhammer RH", "WeaponR1", 0, 0, 0, 6, 0));
         items3.add(new Item(0, 9, 4, "Amulet of Iron", "Amulet", 0, 0, 0, 0, 0));
         items3.add(new Item(0, 15, 5, "Boots of Vitality", "Boots", 0, 28, 0, 0, 0));
-        items3.add(new Item(2, 21, 3, "Bracers of Vitality", "Bracers", 0, 30, 0, 0, 10));
+        items3.add(new Item(3, 21, 3, "Bracers of Vitality", "Bracers", 0, 30, 0, 0, 10));
         items3.add(new Item(0, 25, 0, "Flail of Lifesteal RH", "WeaponR1", 0, 15, 0, 4, 13));
         items3.add(new Item(5, 20, 10, "Helm of Life", "Helm", 0, 10, 0, 0, 0));
         items3.add(new Item(5, 15, 9, "Helm of Vampire", "Helm", 0, 0, 0, 0, 6));
@@ -441,15 +449,15 @@ public class Main {
 
         // RANDOM ITEM LIST 4
         ArrayList<Item> items4 = new ArrayList<>();    // power level of items = items1-99
-        items4.add(new Item(5, 8, 13, "Helm of Metal", "Helm", 0, 11, 0, 0, 0));
-        items4.add(new Item(4, 7, 13, "Armor of Shadows", "Armor", 0, 24, 0, 0, 0));
-        items4.add(new Item(4, 6, 11, "Ring of Plenty R2", "Ring2", 0, 20, 0, 0, 0));
+        items4.add(new Item(9, 8, 13, "Helm of Metal", "Helm", 0, 11, 0, 0, 0));
+        items4.add(new Item(7, 7, 13, "Armor of Shadows", "Armor", 0, 24, 0, 0, 0));
+        items4.add(new Item(6, 6, 11, "Ring of Plenty R2", "Ring2", 0, 20, 0, 0, 0));
         items4.add(new Item(5, 4, 13, "Armor of Glory", "Armor", 1, 16, 0, 0, 0));
         items4.add(new Item(2, 5, 0, "Giant Axe of Doom RH", "WeaponR1", 0, 0, 0, 7, 13));
-        items4.add(new Item(4, 6, 7, "Boots of Iron", "Boots", 0, 0, 0, 0, 0));
+        items4.add(new Item(6, 6, 7, "Boots of Iron", "Boots", 0, 0, 0, 0, 0));
         items4.add(new Item(0, 20, 0, "Ring of Wedding R1", "Ring1", 1, 0, 8, 0, 0));
         items4.add(new Item(0, 11, 0, "Claymore of Doom LH", "WeaponL1", 0, 0, 0, 8, 0));
-        items4.add(new Item(3, 20, 9, "Belt of Doom", "Belt", 0, 40, 5, 9, 7));
+        items4.add(new Item(7, 20, 9, "Belt of Doom", "Belt", 0, 40, 5, 9, 7));
         items4.add(null);
         items4.add(null);
         items4.add(null);
@@ -485,7 +493,7 @@ public class Main {
         items5.add(new Item(10, 25, 14, "Belt of Darkness", "Belt", 3, 0, 5, 0, 14));
         items5.add(new Item(0, 25, 0, "Claymore of Darkness LH", "WeaponL1", 0, 0, 0, 10, 10));
         items5.add(new Item(10, 25, 13, "Leggings of Darkness", "Leggings", 0, 50, 5, 0, 8));
-        items5.add(new Item(5, 25, 8, "Ring of Darkness R1", "Ring1", 1, 35, 2, 0, 10));
+        items5.add(new Item(15, 25, 8, "Ring of Darkness R1", "Ring1", 1, 35, 2, 0, 10));
         items5.add(new Item(0, 25, 12, "Shoulders of Darkness", "Shoulders", 2, 25, 5, 0, 10));
         items5.add(new Item(0, 25, 5, "Amulet of Darkness", "Amulet", 1, 30, 5, 0, 8));
         items5.add(null);
@@ -549,14 +557,14 @@ public class Main {
 
         // RANDOM ITEM LIST 6 CHAOS ITEMS TERROR MONSTERS
         ArrayList<Item> items6 = new ArrayList<>();    // power level of items = items1-99
-        items6.add(new Item(11, 45, 25, "Helm of Chaos", "Helm", 3, 91, 0, 0, 15));
+        items6.add(new Item(18, 45, 25, "Helm of Chaos", "Helm", 3, 91, 0, 0, 15));
         items6.add(new Item(0, 45, 15, "Bracers of Chaos", "Bracers", 0, 60, 0, 0, 0));
         items6.add(new Item(0, 45, 0, "Warhammer of Chaos RH", "WeaponR1", 0, 0, 0, 8, 0));
         items6.add(new Item(0, 45, 17, "Boots of Chaos", "Boots", 1, 60, 10, 0, 15));
-        items6.add(new Item(10, 45, 15, "Belt of Chaos", "Belt", 2, 0, 5, 0, 25));
+        items6.add(new Item(18, 45, 15, "Belt of Chaos", "Belt", 2, 0, 5, 0, 25));
         items6.add(new Item(0, 45, 0, "Claymore of Chaos LH", "WeaponL1", 0, 10, 0, 10, 13));
-        items6.add(new Item(10, 45, 16, "Leggings of Chaos", "Leggings", 0, 70, 5, 0, 10));
-        items6.add(new Item(5, 45, 7, "Ring of Chaos R1", "Ring1", 1, 75, 2, 0, 15));
+        items6.add(new Item(18, 45, 16, "Leggings of Chaos", "Leggings", 0, 70, 5, 0, 10));
+        items6.add(new Item(18, 45, 7, "Ring of Chaos R1", "Ring1", 1, 75, 2, 0, 15));
         items6.add(new Item(0, 45, 13, "Shoulders of Chaos", "Shoulders", 0, 55, 5, 0, 20));
         items6.add(null);
         items6.add(null);
@@ -624,6 +632,7 @@ public class Main {
 
         //_____________________________________________________________________________________________________________________________________________
 
+
         // GAME START
         System.out.println("_________________________________________________________");
         System.out.println("                       Welcome to                        ");
@@ -640,7 +649,7 @@ public class Main {
 
 
         // RPG CHARACTER1
-        RpgChar char1 = new RpgChar(1, 1, 1, 0, setCharName, 30, 0, 0, initialItems, 0, initialItems, initialItems, 0);
+        RpgChar char1 = new RpgChar(1, 1, 1, 0, setCharName, 35, 0, 0, initialItems, 0, initialItems, initialItems, 0);
         // INVENTORY OBJECT - needed for the inventory system
         InventoryClass inventoryObject = new InventoryClass(char1, (ArrayList<Item>) RpgChar.getInventory());
 
@@ -666,12 +675,11 @@ public class Main {
         Encounter firstEncounter = new Encounter(char1, monsters1, items1);
         firstEncounter.performEncounter();
 
-        // ADDS FIXED ITEM TO CHAR
-//        char1.addItem(item1); // adds the item directly to the hero // DON'T USE THIS // DELETE
-//        char1.addItemToInventory(item1);  // adds item 1 to the inventory
-//        System.out.println("Item \"" + item1.getItemName() + "\" dropped."); // WORKS!
 
-        // Call the open inventory method from the InventoryClass
+        // ADDS FIXED ITEM TO CHAR
+//        char1.addItem(item1); // adds the item directly to the hero // use this for testing only
+//        char1.addItemToInventory(item1);  // adds item 1 to the inventory
+//        System.out.println("Item \"" + item1.getItemName() + "\" dropped.");
 
 
         try {
@@ -773,7 +781,7 @@ public class Main {
                                 break;
                             case "4":
                                 if (witchMeetingCounter == 4) {
-                                    char1.charHealth = char1.getCharMaxHealth();  // DELETE
+                                    char1.charHealth = char1.getCharMaxHealth();
                                     System.out.println("\"Come closer and let me heal you, my dear child. But it will come with a price... Wahaha!\"");
                                     System.out.println();
                                     witchMeetingCounter++; // makes the witch disappear after spoken to
@@ -817,7 +825,6 @@ public class Main {
                                 break;
                         }
                         validChoice = true;
-//                        if (!choice2.equals("i")) { // alternative way to write this code, but it buggs because when ENTER is pressed, it ticks up
                         if (choice2.equals("1") || choice2.equals("2") || choice2.equals("3")) {
                             witchMeetingCounter++;
                         }
@@ -870,7 +877,7 @@ public class Main {
             WarlordFrame imageAct2Boss = null;
             int optionThreeSelected2 = 0;
             int crossRoadsI2 = 0; // ensures message "you continue" doesn't play the first time around
-            boolean firstTimeMessag2 = true;
+            boolean firstTimeMessage2 = true;
             int count2 = 0;
             while (optionThreeSelected2 < 1) {
                 boolean validChoice = false;
@@ -937,6 +944,10 @@ public class Main {
                     }
                     crossRoadsI2++;
                 }
+            }
+            if (char1.getCharCurrentHealth() <= 0) {
+                System.out.println("The demons' claws pierce your armor and deep into your chest.");
+                System.out.println("Game over.");
             }
             act2TowerImage.dispose();
             System.out.println("Seconds before its' last breath, the angel whisper things to you... Things no one ever would want to hear.");
@@ -1006,7 +1017,7 @@ public class Main {
                         }
 
                         System.out.println("1. Fight through the snow.");
-                        System.out.println("2. Enter the well-lit cave.");
+                        System.out.println("2. Enter the hidden ice cave.");
                         System.out.println("i. Open inventory.");
                         String hey4 = scanner.nextLine();
 //                    fightCountDown++;
