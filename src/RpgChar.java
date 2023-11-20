@@ -36,7 +36,7 @@ public class RpgChar {
         this.charLifeSteal = charLifeSteal;
         this.inventory = new ArrayList<>();
         this.charEquippedItems = new ArrayList<>(initialEquippedItems);
-        this.charMaxHealth = 30;
+        this.charMaxHealth = 35;
         this.charMaxExperiencePoints = charMaxExperiencePoints;
     }
 
