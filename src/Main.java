@@ -1,3 +1,12 @@
+/**
+ * Author: Jakob Kvejborg
+ * 2023
+ * jakobkvejborglol@gmail.com
+ *
+ */
+
+
+
 import java.util.*;
 import java.util.ArrayList;
 import java.awt.Color;
