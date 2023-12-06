@@ -7,6 +7,14 @@
 
 
 
+//Another simple but dangerous way is to use git command:
+//
+//        git fetch --all
+//
+//        git reset --hard origin/master
+//
+//        (Then all your local change will be lost)
+
 import java.util.*;
 import java.util.ArrayList;
 import java.awt.Color;
@@ -851,6 +859,11 @@ public class Main {
                 }
             }
             act1ForrestImage.dispose(); // closes the ACT 1 forrest image JFRAME
+
+            if (char1.charHealth <= 0) {
+                System.out.println("Game Over.");
+                System.exit(0);
+            }
 
             // _______________________________________________________________________________________________________________________________________________________________________________//
 //                                                  THE STORY CONTINUES

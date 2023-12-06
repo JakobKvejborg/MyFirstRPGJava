@@ -268,20 +268,19 @@ public class Encounter {
                     if (enemyHealth <= 0) {
                         monsterDefeated(encounteredMonster, randomMonsterIndex);
 
-                        break;
                     } else {
                         monsterDealsDamage(encounteredMonster, playerHealth);
+                        if (playerHealth <= 0) {   // PLAYER DIES
+                            System.out.println();
+                            System.out.println("You were defeated. Your ashes will be scattered across the land but your name will be forgotten. Game Over.");
+                            System.exit(0);
+                            break;
+                        }
                     }
 
 
                     //_____________________________________________________
 
-                    if (playerHealth <= 0) {   // PLAYER DIES
-                        System.out.println();
-                        System.out.println("You were defeated. Your ashes will be scattered across the land but your name will be forgotten. Game Over.");
-                        System.exit(0);
-
-                    }
                     printCombatOptions();
                     break;
 
