@@ -2,9 +2,8 @@
  * Author: Jakob Kvejborg
  * 2023
  * jakobkvejborglol@gmail.com
- *
  */
-
+// This is a bugged version, savefile doesn't work at all.
 
 
 //Another simple but dangerous way is to use git command:
@@ -14,7 +13,7 @@
 //        git reset --hard origin/master
 //
 //        (Then all your local change will be lost)
-
+import java.io.*;
 import java.util.*;
 import java.util.ArrayList;
 import java.awt.Color;
@@ -25,8 +24,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.border.Border;
 import javax.sound.sampled.*;
-import java.io.File;
-import java.io.IOException;
+import java.io.Serializable;
 
 // Jakob Kvejborg 18/11/23
 // 18:48
@@ -671,7 +669,7 @@ public class Main {
         System.out.println("- Made by Jakob Kvejborg                                ");
         System.out.println("_________________________________________________________");
 
-
+        SaveLoad saveLoadObject = new SaveLoad(); // TODO fix this
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a name for your hero:");
         String setCharName = scanner.nextLine();
@@ -754,8 +752,10 @@ public class Main {
             //                                                                             ENCOUNTERS THE 3 WARLORDS
             //      ACT 1
 
-            RpgChar character = char1; // Create an instance of RpgChar
-            Encounter encounter = new Encounter(character); // Pass the character instance to Encounter
+                RpgChar character = new RpgChar();
+
+// Create an Encounter using the character instance
+            Encounter encounter = new Encounter(character);
             String choice = scanner.nextLine();  //
             WarlordFrame act1ForrestImage = null;
             WarlordFrame imageWarlordManda = null;
@@ -772,7 +772,7 @@ public class Main {
             while (optionThreeSelected < 3) {
                 boolean validChoice = false;
                 while (!validChoice) {
-                    if (char1.charHealth > 0) {
+//                    if (char1.charHealth > 0) {
                         if (firstTimeMessage) {
                             System.out.println("This is a world of crossroads - it's time to choose your path.");
                             System.out.println("Enter your choice: ");
@@ -822,6 +822,22 @@ public class Main {
                                     System.out.println("Error, enter a valid choice.");
                                 }
                                 break;
+                            case "save":
+                                saveLoadObject.saveGame(character);
+                                break;
+                            case "load":
+                                saveLoadObject.loadGame(character);
+                                char1 = character;
+                                System.out.println(char1.getCharName());
+                                break;
+                            case "exit":
+                                System.out.println("Closing the game.");
+                                System.exit(0);
+                                break;
+                            case "reset":
+                                String[] arguments = {};
+                                main(arguments);
+                                break;
                             case "3":
                                 switch (count) {
                                     case 0:
@@ -859,12 +875,12 @@ public class Main {
                         if (choice2.equals("1") || choice2.equals("2") || choice2.equals("3")) {
                             witchMeetingCounter++;
                         }
-                    } else {
-                        System.out.println("The evil of this land overwhelm you.");
-                        System.out.println();
-                        System.out.println("Game Over.");
-                        System.exit(0);
-                    }
+//                    } else {
+//                        System.out.println("The evil of this land overwhelm you.");
+//                        System.out.println();
+//                        System.out.println("Game Over.");
+//                        System.exit(0);
+//                    }
                     i++;
                 }
             }

@@ -1,8 +1,9 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class InventoryClass {
+public class InventoryClass implements Serializable {
     private RpgChar character;
     Scanner inventoryScanner = new Scanner(System.in);
     private ArrayList<Item> itemsList;

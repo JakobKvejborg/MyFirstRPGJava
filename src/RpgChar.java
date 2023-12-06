@@ -1,7 +1,10 @@
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-public class RpgChar {
+public class RpgChar implements Serializable {
 
     public int charStrength;
     public int charLevel;
@@ -243,6 +246,27 @@ public class RpgChar {
             charLevel -= charItem.getItemLevel();
             items.remove(charItem);
         }
+    }
+
+    public Serializable everyStatForSaving() {
+        // Create a Serializable object (can be a Map, custom class, etc.) to store all necessary stats
+        Map<String, Serializable> characterStats = new HashMap<>();
+
+        // Add all necessary character stats to the map
+        characterStats.put("charStrength", charStrength);
+        characterStats.put("charLevel", charLevel);
+        characterStats.put("charAttack", charAttack);
+        characterStats.put("charDefense", charDefense);
+        characterStats.put("charName", charName);
+        characterStats.put("charHealth", charHealth);
+        characterStats.put("charMagic", charMagic);
+        characterStats.put("charExperiencePoints", charExperiencePoints);
+        characterStats.put("charLifeSteal", charLifeSteal);
+        characterStats.put("charInventory", charInventory);
+        characterStats.put("charEquippedItems", (Serializable) charEquippedItems);
+
+        // Return the Serializable object containing all the character's stats
+        return (Serializable) characterStats;
     }
 
 }

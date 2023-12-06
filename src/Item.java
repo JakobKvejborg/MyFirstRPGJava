@@ -1,8 +1,9 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Item {
+public class Item implements Serializable {
 
     private int itemStrength;
     private int itemLevelRequirement;
