@@ -223,6 +223,7 @@ public class InventoryClass implements Serializable {
                     character.addItem(itemToEquip);
                     character.addItemToCharEquipped(itemToEquip); // equips the new item to the char
                     System.out.println("Item '" + itemToEquip.getItemName() + "' equipped.");
+                    System.out.println();
 //                    itemToEquip.incrementTimesEquipped(); // these two methods can tell how many times an item has been equipped. Used for testing.
 //                    System.out.println("Number of times equipped: " + itemToEquip.getNumberOfTimesEquipped()); // these two methods can tell how many times an item has been equipped. Used for testing.
                     break;

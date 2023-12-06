@@ -29,7 +29,6 @@ public class Item implements Serializable {
         this.itemMagic = itemMagic;
         this.itemAttack = itemAttack;
         this.itemLifeSteal = itemLifeSteal;
-        // this.itemIsEquipped = false;
     }
 
     // ITEM CONSTRUCTOR (OVERLOADED, USED FOR TESTING NUMBEROFTIMESEQUIPPED)
@@ -46,7 +45,6 @@ public class Item implements Serializable {
         this.itemLifeSteal = itemLifeSteal;
         this.numberOfTimesEquipped = numberOfTimesEquipped;
     }
-
 
 
     // METHOD TO EQUIP ITEM
@@ -106,6 +104,7 @@ public class Item implements Serializable {
     public double getItemLifeSteal() {
         return itemLifeSteal;
     }
+
     public int getNumberOfTimesEquipped() {
         return numberOfTimesEquipped;
     }
@@ -115,7 +114,7 @@ public class Item implements Serializable {
     }
 
     // SCANNER PRESS ENTER TO CONTINUE METHOD
-    public static void pressEnterToContinue(){
+    public static void pressEnterToContinue() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Press 'ENTER' to continue...");
         String enterToContinue8 = scanner.nextLine();
