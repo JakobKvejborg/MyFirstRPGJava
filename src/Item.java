@@ -1,6 +1,4 @@
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Item implements Serializable {
@@ -16,6 +14,7 @@ public class Item implements Serializable {
     private int itemAttack;
     private double itemLifeSteal;
     private boolean itemIsEquipped;
+    private int numberOfTimesEquipped; // used for testing only
 
 
     // ITEM CONSTRUCTOR
@@ -32,6 +31,22 @@ public class Item implements Serializable {
         this.itemLifeSteal = itemLifeSteal;
         // this.itemIsEquipped = false;
     }
+
+    // ITEM CONSTRUCTOR (OVERLOADED, USED FOR TESTING NUMBEROFTIMESEQUIPPED)
+    public Item(int itemStrength, int itemLevelRequirement, int itemDefense, String itemName, String itemType, int itemLevel, int itemMaxHealth, int itemMagic, int itemAttack, double itemLifeSteal, int numberOfTimesEquipped) {
+        this.itemLevelRequirement = itemLevelRequirement;
+        this.itemDefense = itemDefense;
+        this.itemName = itemName;
+        this.itemType = itemType;
+        this.itemLevel = itemLevel;
+        this.itemStrength = itemStrength;
+        this.itemMaxHealth = itemMaxHealth;
+        this.itemMagic = itemMagic;
+        this.itemAttack = itemAttack;
+        this.itemLifeSteal = itemLifeSteal;
+        this.numberOfTimesEquipped = numberOfTimesEquipped;
+    }
+
 
 
     // METHOD TO EQUIP ITEM
@@ -91,15 +106,21 @@ public class Item implements Serializable {
     public double getItemLifeSteal() {
         return itemLifeSteal;
     }
+    public int getNumberOfTimesEquipped() {
+        return numberOfTimesEquipped;
+    }
 
+    public void incrementTimesEquipped() {
+        numberOfTimesEquipped++;
+    }
 
     // SCANNER PRESS ENTER TO CONTINUE METHOD
-    public static String pressEnterToContinue(){
+    public static void pressEnterToContinue(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Press 'ENTER' to continue...");
         String enterToContinue8 = scanner.nextLine();
-        return enterToContinue8;
     }
+
 
 }
 

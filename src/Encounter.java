@@ -79,7 +79,9 @@ public class Encounter {
     }
 
     public void printPlayerAllStats() {
-        System.out.println("Name:" + character.charName + "  Strength:" + brightBlackColor + character.charStrength + resetColor + "  Level:" + character.charLevel + "  Attack:" + redColor + character.charAttack + resetColor + "  Defense:" + brightBlueColor + character.charDefense + resetColor + "  Health:" + greenColor + character.charHealth + "/" + character.getCharMaxHealth() + resetColor + "  Magic:" + character.charMagic + "  Lifesteal:" + "[" + character.charLifeSteal + "%]" + "  XP:" + blueColor + character.charExperiencePoints + "/" + character.getCharMaxExperiencePoints() + resetColor);
+        System.out.println("Name:" + character.charName + "  Strength:" + brightBlackColor + character.charStrength + resetColor + "  Level:" + character.charLevel + "  Attack:" + redColor + character.charAttack + resetColor
+                + "  Defense:" + brightBlueColor + character.charDefense + resetColor + "  Health:" + greenColor + character.charHealth + "/" + character.getCharMaxHealth() + resetColor + "  Magic:" + character.charMagic
+                + "  Lifesteal:" + "[" + character.charLifeSteal + "%]" + "  XP:" + blueColor + character.charExperiencePoints + "/" + character.getCharMaxExperiencePoints() + resetColor);
     }
 
     // _____________________________________________________________________________________________________________________
