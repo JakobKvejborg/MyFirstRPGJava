@@ -240,8 +240,6 @@ public class Encounter {
                     System.out.println("You attack and deal " + playerDamage + " damage.");
                     System.out.println();
                     enemyHealth -= playerDamage;
-                    // updates character's health after each enemy attack
-                    //encounteredMonster.setMonsterHealth(enemyHealth);
 
 
                     // PLAYER LIFESTEALS
@@ -264,12 +262,15 @@ public class Encounter {
 
                     System.out.println(encounteredMonster.getMonsterName() + getMonsterHealthColor(enemyHealth) + " (" + enemyHealth + ")" + resetColor);
 
+
+
                     // MONSTER IS DEFEATED, ITEM FIND INSIDE MONSTERDEFEATED METHOD
                     if (enemyHealth <= 0) {
                         monsterDefeated(encounteredMonster, randomMonsterIndex);
 
                     } else {
                         monsterDealsDamage(encounteredMonster, playerHealth);
+                        printCombatOptions();
                         if (playerHealth <= 0) {   // PLAYER DIES
                             System.out.println();
                             System.out.println("You were defeated. Your ashes will be scattered across the land but your name will be forgotten. Game Over.");
@@ -281,7 +282,7 @@ public class Encounter {
 
                     //_____________________________________________________
 
-                    printCombatOptions();
+
                     break;
 
                 case "b":        // PLAYER BLOCKS

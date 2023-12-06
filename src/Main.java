@@ -48,6 +48,13 @@ public class Main {
         }
     }
 
+    public static void gameOver(RpgChar rpgChar) {
+        if (rpgChar.charHealth <= 0) {
+            System.out.println("You have been slain. You lay in a pool of your own blood. Game over.");
+            System.exit(0);
+        }
+    }
+
 
     public static void main(String[] args) {
 
@@ -98,7 +105,7 @@ public class Main {
         Monster warlordKoold = new Monster(64, 14, "Warlord Koold", 24);
         Monster warlordYdris = new Monster(88, 20, "Warlord Ydris", 33);
         Monster act2Boss = new Monster(666, 73, "Abaddon, Fallen Angel", 80);
-        Monster act3Boss = new Monster(2000, 198, "Hidden Entity", 110);
+        Monster act3Boss = new Monster(2000, 168, "Hidden Entity", 110);
         ArrayList<Monster> warlordMandaList = new ArrayList<>();
         warlordMandaList.add(warlordManda);
         ArrayList<Monster> warlordKooldList = new ArrayList<>();
@@ -237,6 +244,8 @@ public class Main {
         items1.add(new Item(0, 1, 1, "Amulet of Rust", "Amulet", 0, 0, 1, 0, 0));
         items1.add(new Item(2, 0, 1, "Helm of Lifesteal", "Helm", 0, 6, 0, 0, 8));
         items1.add(new Item(0, 0, 1, "Ring of Silver R2", "Ring2", 0, 5, 1, 0, 0));
+        items1.add(new Item(0, 1, 1, "Spiked Shield RH", "WeaponR1", 0, 2, 0, 1, 0));
+        items1.add(null);
         items1.add(null);
         items1.add(null);
         items1.add(null);
@@ -695,6 +704,7 @@ public class Main {
         System.out.println("It's a monster! Slay it hero. Enter \"A\" to attack!");
         Encounter firstEncounter = new Encounter(char1, monsters1, items1);
         firstEncounter.performEncounter();
+        gameOver(char1);
 
 
         // ADDS FIXED ITEM TO CHAR
@@ -716,7 +726,7 @@ public class Main {
         // SECOND FIGHT
         Encounter secondEncounter = new Encounter(char1, monsters1, items1);
         secondEncounter.performEncounter();
-
+        gameOver(char1);
         waitOneSecond();
 
         if (char1.charHealth > 0) {
@@ -860,10 +870,7 @@ public class Main {
             }
             act1ForrestImage.dispose(); // closes the ACT 1 forrest image JFRAME
 
-            if (char1.charHealth <= 0) {
-                System.out.println("Game Over.");
-                System.exit(0);
-            }
+            gameOver(char1);
 
             // _______________________________________________________________________________________________________________________________________________________________________________//
 //                                                  THE STORY CONTINUES
@@ -921,7 +928,7 @@ public class Main {
                         System.out.println("1. Slay the monsters surrounding the town.");
                         System.out.println("2. Enter the tower and battle the nightmares inside.");
                         System.out.println("3. Ascend the tower and confront the horror that awaits you.");
-                        if (healingWellCounter >= 15) {
+                        if (healingWellCounter >= 16) {
                             System.out.println("4. Only now you notice a well in the middle of street. Investigate it.");
                         }
                         System.out.println("i. Open inventory.");
@@ -945,7 +952,7 @@ public class Main {
                                 seventhEncounter.performEncounter();
                                 break;
                             case "4":
-                                if (healingWellCounter >= 15) {
+                                if (healingWellCounter >= 16) {
                                     char1.charHealth = char1.getCharMaxHealth();
                                     System.out.println("You drink from the well and feel refreshed.");
                                     System.out.println();
@@ -989,10 +996,9 @@ public class Main {
                     crossRoadsI2++;
                 }
             }
-            if (char1.getCharCurrentHealth() <= 0) {
-                System.out.println("The demons' claws pierce your armor and deep into your chest.");
-                System.out.println("Game over.");
-            }
+
+            gameOver(char1);
+
             act2TowerImage.dispose();
             System.out.println("Seconds before its' last breath, the angel whisper things to you... Things no one ever would want to hear.");
 
@@ -1107,6 +1113,7 @@ public class Main {
                     crossRoadsI3++;
                 }
             }
+            gameOver(char1);
             act3Frame.dispose();
 
             // _______________________________________________________________________________________________________________________________________________________________________________//
