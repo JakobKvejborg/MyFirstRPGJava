@@ -228,7 +228,7 @@ public class ListOfItems {
         items3.add(new Item(1, 7, 0, "Small Hammer RH", "WeaponR1", 0, 0, 0, 5, 0));
         items3.add(new Item(2, 6, 4, "Boots of Metal", "Boots", 0, 0, 0, 0, 0));
         items3.add(new Item(0, 9, 4, "Leggings of Vitality", "Leggings", 0, 23, 0, 0, 0));
-        items3.add(new Item(0, 7, 0, "Amulet of Lifesteal", "Amulet", 0, 15, 0, 0, 5));
+        items3.add(new Item(0, 7, 0, "Amulet of Lifesteal", "Amulet", 0, 15, 0, 0, 7));
         items3.add(new Item(0, 10, 0, "Ring of Jordan R1", "Ring1", 2, 0, 0, 0, 0));
         items3.add(new Item(0, 5, 7, "Gloves of Iron", "Gloves", 0, 0, 0, 0, 0));
         items3.add(new Item(4, 11, 5, "Shoulders of Metal", "Shoulders", 0, 23, 0, 0, 0));
