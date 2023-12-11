@@ -8,7 +8,6 @@ public class Monster {
     private int monsterDamageModifier;
 
 
-
     // MONSTER CONSTRUCTOR
     public Monster(int monsterHealth, int monsterAttack, String monsterName, int monsterExperience) {
         this.monsterHealth = monsterHealth;

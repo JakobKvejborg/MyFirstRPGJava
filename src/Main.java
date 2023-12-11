@@ -144,7 +144,7 @@ public class Main {
             //                                                                             ENTER THE 3 WARLORDS
             //      ACT 1
 
-                RpgChar character = new RpgChar();
+            RpgChar character = new RpgChar();
 
 // Create an Encounter using the character instance
             Encounter encounter = new Encounter(character);
@@ -165,108 +165,108 @@ public class Main {
                 boolean validChoice = false;
                 while (!validChoice) {
 //                    if (char1.charHealth > 0) {
-                        if (firstTimeMessage) {
-                            System.out.println("This is a world of crossroads - it's time to choose your path.");
-                            System.out.println("Enter your choice: ");
-                            act1ForrestImage = new WarlordFrame("forrest.png");
-                            firstTimeMessage = false;
-                        }
-                        if (i > 0) { // ensures message "you continue" doesn't play the first time around
-                            System.out.println("After the battle you return to the place you started. You continue:");
-                        }
-                        System.out.println("1. Enter the forest and fight lesser enemies.");
-                        System.out.println("2. Slay the monsters on the road to the castle.");
-                        System.out.println("3. Go to the Castle in the distance in hope of defeating one of the 3 Warlords.");
-                        if (witchMeetingCounter == 5) {
-                            System.out.println("4. A mysterious figure has appeared on the outskirts of the forest. It could be a witch. Perhaps you should speak to her?");
-                        }
-                        System.out.println("i. Open inventory.");
+                    if (firstTimeMessage) {
+                        System.out.println("This is a world of crossroads - it's time to choose your path.");
+                        System.out.println("Enter your choice: ");
+                        act1ForrestImage = new WarlordFrame("forrest.png");
+                        firstTimeMessage = false;
+                    }
+                    if (i > 0) { // ensures message "you continue" doesn't play the first time around
+                        System.out.println("After the battle you return to the place you started. You continue:");
+                    }
+                    System.out.println("1. Enter the forest and fight lesser enemies.");
+                    System.out.println("2. Slay the monsters on the road to the castle.");
+                    System.out.println("3. Go to the Castle in the distance in hope of defeating one of the 3 Warlords.");
+                    if (witchMeetingCounter == 5) {
+                        System.out.println("4. A mysterious figure has appeared on the outskirts of the forest. It could be a witch. Perhaps you should speak to her?");
+                    }
+                    System.out.println("i. Open inventory.");
 
-                        //                    fightCountDown++;
+                    //                    fightCountDown++;
 
 
-                        String choice2 = scanner.nextLine();
-                        switch (choice2) {
-                            // open inventory outside battle
-                            case "i":
-                                // Open the character's inventory
-                                inventoryObject.InventoryOverall();
-                                break;
-                            // _________
-                            case "1":
-                                Encounter thirdEncounter = new Encounter(char1, lom.monsters1, loi.items1);
-                                thirdEncounter.performEncounter();
-                                break;
+                    String choice2 = scanner.nextLine();
+                    switch (choice2) {
+                        // open inventory outside battle
+                        case "i":
+                            // Open the character's inventory
+                            inventoryObject.InventoryOverall();
+                            break;
+                        // _________
+                        case "1":
+                            Encounter thirdEncounter = new Encounter(char1, lom.monsters1, loi.items1);
+                            thirdEncounter.performEncounter();
+                            break;
 
-                            case "2":
-                                Encounter fourthEncounter = new Encounter(char1, lom.monsters2, loi.items1);
-                                fourthEncounter.performEncounter();
+                        case "2":
+                            Encounter fourthEncounter = new Encounter(char1, lom.monsters2, loi.items1);
+                            fourthEncounter.performEncounter();
+                            break;
+                        case "4":
+                            if (witchMeetingCounter == 5) {
+                                char1.charHealth = char1.getCharMaxHealth();
+                                System.out.println("\"Come closer and let me heal you, my dear child. But it will come with a price... Wahaha!\"");
+                                System.out.println();
+                                witchMeetingCounter++; // makes the witch disappear after spoken to
+                                Item.pressEnterToContinue();
                                 break;
-                            case "4":
-                                if (witchMeetingCounter == 5) {
-                                    char1.charHealth = char1.getCharMaxHealth();
-                                    System.out.println("\"Come closer and let me heal you, my dear child. But it will come with a price... Wahaha!\"");
-                                    System.out.println();
-                                    witchMeetingCounter++; // makes the witch disappear after spoken to
-                                    Item.pressEnterToContinue();
-                                    break;
-                                } else {
-                                    System.out.println("Error, enter a valid choice.");
-                                }
-                                break;
-                            case "save":
-                                saveLoadObject.saveGame(character);
-                                break;
-                            case "load":
-                                saveLoadObject.loadGame(character);
-                                char1 = character;
-                                System.out.println(char1.getCharName());
-                                break;
-                            case "exit":
-                                System.out.println("Closing the game.");
-                                System.exit(0);
-                                break;
-                            case "reset":
-                                String[] arguments = {};
-                                main(arguments);
-                                break;
-                            case "3":
-                                switch (count) {
-                                    case 0:
-
-                                        imageWarlordManda = new WarlordFrame("Manda.JPG");
-                                        Encounter fifthEncounter = new Encounter(char1, lom.warlordMandaList, loi.itemsWarlords);    // First boss
-                                        fifthEncounter.performEncounter();
-                                        imageWarlordManda.dispose();
-                                        break;
-                                    case 1:
-                                        imageWarlordKoold = new WarlordFrame("Koold.JPG");
-                                        Encounter sixthEncounter = new Encounter(char1, lom.warlordKooldList, loi.itemsWarlords);    // Second boss
-                                        sixthEncounter.performEncounter();
-                                        imageWarlordKoold.dispose();
-                                        break;
-                                    case 2:
-                                        imageWarlordYdris = new WarlordFrame("Ydris.JPG");
-                                        Encounter seventhEncounter = new Encounter(char1, lom.warlordYdrisList, loi.itemsWarlords);   // Third boss
-                                        seventhEncounter.performEncounter();
-                                        imageWarlordYdris.dispose();
-                                        break;
-                                }
-                                optionThreeSelected++;
-                                count++;
-                                if (optionThreeSelected >= 3) {  // progresses the story
-                                    break;
-                                }
-                                break;
-
-                            default:
+                            } else {
                                 System.out.println("Error, enter a valid choice.");
+                            }
+                            break;
+                        case "save":
+                            saveLoadObject.saveGame(character);
+                            break;
+                        case "load":
+                            saveLoadObject.loadGame(character);
+                            char1 = character;
+                            System.out.println(char1.getCharName());
+                            break;
+                        case "exit":
+                            System.out.println("Closing the game.");
+                            System.exit(0);
+                            break;
+                        case "reset":
+                            String[] arguments = {};
+                            main(arguments);
+                            break;
+                        case "3":
+                            switch (count) {
+                                case 0:
+
+                                    imageWarlordManda = new WarlordFrame("Manda.JPG");
+                                    Encounter fifthEncounter = new Encounter(char1, lom.warlordMandaList, loi.itemsWarlords);    // First boss
+                                    fifthEncounter.performEncounter();
+                                    imageWarlordManda.dispose();
+                                    break;
+                                case 1:
+                                    imageWarlordKoold = new WarlordFrame("Koold.JPG");
+                                    Encounter sixthEncounter = new Encounter(char1, lom.warlordKooldList, loi.itemsWarlords);    // Second boss
+                                    sixthEncounter.performEncounter();
+                                    imageWarlordKoold.dispose();
+                                    break;
+                                case 2:
+                                    imageWarlordYdris = new WarlordFrame("Ydris.JPG");
+                                    Encounter seventhEncounter = new Encounter(char1, lom.warlordYdrisList, loi.itemsWarlords);   // Third boss
+                                    seventhEncounter.performEncounter();
+                                    imageWarlordYdris.dispose();
+                                    break;
+                            }
+                            optionThreeSelected++;
+                            count++;
+                            if (optionThreeSelected >= 3) {  // progresses the story
                                 break;
-                        }
-                        validChoice = true;
-                        if (choice2.equals("1") || choice2.equals("2") || choice2.equals("3")) {
-                            witchMeetingCounter++;
-                        }
+                            }
+                            break;
+
+                        default:
+                            System.out.println("Error, enter a valid choice.");
+                            break;
+                    }
+                    validChoice = true;
+                    if (choice2.equals("1") || choice2.equals("2") || choice2.equals("3")) {
+                        witchMeetingCounter++;
+                    }
 //                    } else {
 //                        System.out.println("The evil of this land overwhelm you.");
 //                        System.out.println();
@@ -487,7 +487,7 @@ public class Main {
                                 break;
                             // _________
                             case "1":
-                                Encounter ninthEncounter = new Encounter(char1, lom.monsters5, loi.items3);
+                                Encounter ninthEncounter = new Encounter(char1, lom.monsters5, loi.items3); // Frost monster
                                 ninthEncounter.performEncounter();
                                 break;
 

@@ -20,8 +20,8 @@ public class ListOfMonsters {
         Monster warlordManda = new Monster(45, 12, "Warlord Manda", 20);
         Monster warlordKoold = new Monster(64, 14, "Warlord Koold", 24);
         Monster warlordYdris = new Monster(88, 20, "Warlord Ydris", 33);
-        Monster act2Boss = new Monster(666, 72, "Abaddon, Fallen Angel", 80);
-        Monster act3Boss = new Monster(2000, 168, "Hidden Entity", 110);
+        Monster act2Boss = new Monster(666, 72, "Abaddon, Fallen Angel", 88);
+        Monster act3Boss = new Monster(2000, 152, "Hidden Entity", 110);
         warlordMandaList.add(warlordManda);
         warlordKooldList.add(warlordKoold);
         warlordYdrisList.add(warlordYdris);

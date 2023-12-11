@@ -265,7 +265,6 @@ public class Encounter {
                     System.out.println(encounteredMonster.getMonsterName() + getMonsterHealthColor(enemyHealth) + " (" + enemyHealth + ")" + resetColor);
 
 
-
                     // MONSTER IS DEFEATED, ITEM FIND INSIDE MONSTERDEFEATED METHOD
                     if (enemyHealth <= 0) {
                         monsterDefeated(encounteredMonster, randomMonsterIndex);

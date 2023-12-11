@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class ListOfItems {
-//    public Item item1; // this needs to be used if the test items should be working
+    //    public Item item1; // this needs to be used if the test items should be working
     public ArrayList<Item> items1 = new ArrayList<>();
     public ArrayList<Item> items1a = new ArrayList<>();
     public ArrayList<Item> items2 = new ArrayList<>();
@@ -243,6 +243,10 @@ public class ListOfItems {
         items3.add(new Item(0, 16, 0, "Dagger of Vampire LH", "WeaponL1", 0, 0, 1, 3, 13));
         items3.add(new Item(0, 26, 0, "Ring of Hunger R2", "Ring2", 0, 10, 2, 0, 7));
         items3.add(new Item(0, 28, 0, "Flail of Hunger LH", "WeaponL1", 0, 0, 0, 3, 15));
+        items3.add(new Item(2, 22, 7, "Leggings of Steel", "Leggings", 0, 10, 2, 0, 0));
+        items3.add(new Item(10, 19, 6, "Bracers of Steel", "Bracers", 0, 0, 2, 0, 0));
+        items3.add(null);
+        items3.add(null);
         items3.add(null);
         items3.add(null);
         items3.add(null);
