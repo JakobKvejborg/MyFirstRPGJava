@@ -7,6 +7,7 @@ public class ListOfItems {
     public ArrayList<Item> items2 = new ArrayList<>();
     public ArrayList<Item> itemsWarlords = new ArrayList<>();
     public ArrayList<Item> items3 = new ArrayList<>();
+    public ArrayList<Item> items3a = new ArrayList<>();
     public ArrayList<Item> items4 = new ArrayList<>();    // power level of items = items1-99
     public ArrayList<Item> items5 = new ArrayList<>();    // power level of items = items1-99
     public ArrayList<Item> items6 = new ArrayList<>();    // power level of items = items1-99
@@ -36,11 +37,11 @@ public class ListOfItems {
         items1.add(new Item(0, 1, 0, "Small Knife LH", "WeaponL1", 0, 0, 0, 1, 5));
         items1.add(new Item(0, 1, 1, "Belt of Defense", "Belt", 0, 0, 0, 0, 0));
         items1.add(new Item(0, 2, 1, "Bracers of Lifesteal", "Bracers", 0, 0, 0, 0, 10));
-        items1.add(new Item(3, 2, 2, "Shoulders of Defense", "Shoulders", 0, 0, 0, 0, 0));
+        items1.add(new Item(2, 2, 2, "Shoulders of Defense", "Shoulders", 0, 0, 0, 0, 0));
         items1.add(new Item(0, 1, 1, "Leggings of Health", "Leggings", 0, 5, 0, 0, 0));
         items1.add(new Item(2, 0, 2, "Shoulders of Lifesteal", "Shoulders", 0, 0, 0, 0, 12));
-        items1.add(new Item(1, 0, 2, "Belt of Lifesteal", "Belt", 0, 0, 0, 0, 10));
-        items1.add(new Item(4, 0, 1, "Shoulders of Strength", "Shoulders", 0, 0, 0, 0, 0));
+        items1.add(new Item(0, 0, 2, "Belt of Lifesteal", "Belt", 0, 0, 0, 0, 10));
+        items1.add(new Item(3, 0, 1, "Shoulders of Strength", "Shoulders", 0, 0, 0, 0, 0));
         items1.add(new Item(0, 0, 0, "Small Axe RH", "WeaponR1", 0, 0, 0, 2, 0));
         items1.add(new Item(0, 0, 0, "Small Scythe RH", "WeaponR1", 0, 0, 0, 2, 5));
         items1.add(new Item(1, 3, 1, "Ring of Life R1", "Ring1", 0, 9, 0, 0, 0));
@@ -284,6 +285,63 @@ public class ListOfItems {
         items3.add(null);
         items3.add(null);
         items3.add(null);
+
+        // RANDOM ITEMS LIST 3A (FROST)
+        items3a.add(new Item(8, 1, 3, "Helm of Strong", "Helm", 0, 0, 5, 0, 0));
+        items3a.add(new Item(5, 5, 14, "Armor of Illness", "Armor", 0, 0, 4, 0, 0));
+        items3a.add(new Item(1, 4, 8, "Ring of Defense R1", "Ring1", 0, 1, 3, 0, 5));
+        items3a.add(new Item(3, 3, 7, "Armor of Metal", "Armor", 0, 28, 4, 0, 0));
+        items3a.add(new Item(4, 4, 12, "Armor of Gold", "Armor", 0, 11, 2, 0, 0));
+        items3a.add(new Item(6, 9, 10, "Armor of Rock", "Armor", 0, 4, 4, 0, 0));
+        items3a.add(new Item(5, 3, 1, "Ring of Strength R2", "Ring2", 0, 0, 0, 0, 0));
+        items3a.add(new Item(5, 15, 9, "Helm of Vampire", "Helm", 0, 0, 0, 0, 6));
+        items3a.add(new Item(0, 28, 0, "Flail of Hunger LH", "WeaponL1", 0, 0, 0, 3, 15));
+        items3a.add(new Item(10, 19, 6, "Bracers of Steel", "Bracers", 0, 0, 2, 0, 0));
+        items3a.add(new Item(0, 19, 12, "Leggings of Gold", "Leggings", 0, 23, 0, 0, 0));
+        items3a.add(new Item(0, 19, 14, "Amulet of Gold", "Amulet", 0, 0, 0, 0, 0));
+        items3a.add(new Item(0, 15, 15, "Gloves of Gold", "Gloves", 0, 0, 0, 0, 0));
+        items3a.add(new Item(2, 21, 11, "Gloves of Pain", "Gloves", 0, 20, 3, 0, 5));
+        items3a.add(new Item(10, 23, 12, "Leggings of Smashing", "Leggings", 0, 33, 0, 0, 0));
+        items3a.add(new Item(0, 26, 12, "Amulet of Shrines", "Amulet", 0, 25, 0, 0, 9));
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
+        items3a.add(null);
 
         // RANDOM ITEM LIST 4
         items4.add(new Item(9, 8, 13, "Helm of Metal", "Helm", 0, 11, 0, 0, 0));
