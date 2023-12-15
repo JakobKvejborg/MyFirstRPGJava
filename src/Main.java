@@ -16,6 +16,7 @@
 //
 //        Alt + 9 = git history, able to return to any previous version of the code
 
+import javax.swing.*;
 import java.util.*;
 import java.util.ArrayList;
 
@@ -46,8 +47,34 @@ public class Main {
         }
     }
 
+    public void showGUI() {
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                new GUI();
+            }
+        });
+    }
+
 
     public static void main(String[] args) {
+//         TEST AREA
+//        _______________________________________________________________________________
+
+
+
+
+
+        SwingUtilities.invokeLater(() -> {
+                    GUI gui = new GUI(); // Creating GUI instance
+
+                    gui.showWelcomeMessage(); // Display the welcome message in the GUI
+                    String heroName = gui.askForHeroName(); // Get hero name from user via GUI
+                });
+
+
+
+
+//        _________________________________________________________________________________
 
 
         // GAME START
