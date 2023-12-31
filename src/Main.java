@@ -50,7 +50,7 @@ public class Main {
     public void showGUI() {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                new GUI();
+//                new GUI();
             }
         });
     }
@@ -65,10 +65,10 @@ public class Main {
 
 
         SwingUtilities.invokeLater(() -> {
-                    GUI gui = new GUI(); // Creating GUI instance
+//                    GUI gui = new GUI(); // Creating GUI instance
 
-                    gui.showWelcomeMessage(); // Display the welcome message in the GUI
-                    String heroName = gui.askForHeroName(); // Get hero name from user via GUI
+//                    gui.showWelcomeMessage(); // Display the welcome message in the GUI
+//                    String heroName = gui.askForHeroName(); // Get hero name from user via GUI
                 });
 
 
