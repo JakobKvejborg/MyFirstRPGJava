@@ -109,7 +109,7 @@ public class Encounter {
     public void monsterDefeated(Monster encounteredMonster, int randomMonsterIndex) {
         System.out.println();
         System.out.println("You defeated the " + encounteredMonster.getMonsterName() + "!");
-        System.out.println("You gained " + blueColor + encounteredMonster.monsterExperience + resetColor + " XP.");
+        System.out.println("You gained " + blueColor + encounteredMonster.monsterExperience + resetColor + " XP");
         character.charGainExperience(encounteredMonster);  // XP gained
         System.out.println();
         // ITEM FIND

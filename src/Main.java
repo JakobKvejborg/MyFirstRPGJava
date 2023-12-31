@@ -514,7 +514,7 @@ public class Main {
                                 break;
                             // _________
                             case "1":
-                                Encounter ninthEncounter = new Encounter(char1, lom.monsters5, loi.items3a); // Frost monster
+                                Encounter ninthEncounter = new Encounter(char1, lom.monsters5, loi.items3); // Frost monster
                                 ninthEncounter.performEncounter();
                                 break;
 
