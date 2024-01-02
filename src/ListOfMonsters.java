@@ -17,9 +17,9 @@ public class ListOfMonsters {
 
     public ListOfMonsters() {
         // FIXED MONSTER LIST BOSSES
-        Monster warlordManda = new Monster(45, 12, "Warlord Manda", 20);
-        Monster warlordKoold = new Monster(64, 14, "Warlord Koold", 24);
-        Monster warlordYdris = new Monster(88, 20, "Warlord Ydris", 33);
+        Monster warlordManda = new Monster(49, 10, "Warlord Manda", 20);
+        Monster warlordKoold = new Monster(67, 12, "Warlord Koold", 24);
+        Monster warlordYdris = new Monster(91, 18, "Warlord Ydris", 33);
         Monster act2Boss = new Monster(666, 72, "Abaddon, Fallen Angel", 88);
         Monster act3Boss = new Monster(2000, 149, "Hidden Entity", 110);
         warlordMandaList.add(warlordManda);

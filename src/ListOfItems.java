@@ -39,7 +39,7 @@ public class ListOfItems {
         items1.add(new Item(0, 2, 1, "Bracers of Lifesteal", "Bracers", 0, 0, 0, 0, 10));
         items1.add(new Item(3, 2, 2, "Shoulders of Defense", "Shoulders", 0, 0, 0, 0, 0));
         items1.add(new Item(0, 1, 1, "Leggings of Health", "Leggings", 0, 5, 0, 0, 0));
-        items1.add(new Item(2, 0, 2, "Shoulders of Lifesteal", "Shoulders", 0, 0, 0, 0, 12));
+        items1.add(new Item(2, 0, 2, "Shoulders of Lifesteal", "Shoulders", 0, 0, 0, 0, 9));
         items1.add(new Item(1, 0, 2, "Belt of Lifesteal", "Belt", 0, 0, 0, 0, 10));
         items1.add(new Item(4, 0, 1, "Shoulders of Strength", "Shoulders", 0, 0, 0, 0, 0));
         items1.add(new Item(0, 0, 0, "Small Axe RH", "WeaponR1", 0, 0, 0, 2, 0));
@@ -210,7 +210,7 @@ public class ListOfItems {
         itemsWarlords.add(new Item(2, 4, 6, "Ring of Blood R1", "Ring1", 0, 1, 3, 0, 0));
         itemsWarlords.add(new Item(4, 3, 4, "Leggings of Blood", "Leggings", 0, 8, 1, 0, 0));
         itemsWarlords.add(new Item(3, 4, 4, "Belt of Blood", "Belt", 0, 11, 2, 0, 0));
-        itemsWarlords.add(new Item(2, 5, 3, "Shoulders of Blood", "Shoulders", 0, 4, 1, 0, 0));
+        itemsWarlords.add(new Item(2, 5, 3, "Shoulders of Blood", "Shoulders", 0, 4, 1, 0, 11));
         itemsWarlords.add(new Item(3, 3, 3, "Boots of Blood", "Boots", 0, 0, 0, 0, 7));
         itemsWarlords.add(new Item(0, 8, 0, "Amulet of Blood", "Amulet", 0, 15, 3, 0, 0));
         itemsWarlords.add(null);
@@ -303,6 +303,7 @@ public class ListOfItems {
         items3a.add(new Item(2, 21, 11, "Gloves of Pain", "Gloves", 0, 20, 3, 0, 5));
         items3a.add(new Item(10, 23, 12, "Leggings of Smashing", "Leggings", 0, 33, 0, 0, 0));
         items3a.add(new Item(0, 26, 12, "Amulet of Shrines", "Amulet", 0, 25, 0, 0, 9));
+        items3a.add(new Item(2, 5, 3, "Shoulders of Blood", "Shoulders", 0, 4, 1, 0, 11));
         items3a.add(null);
         items3a.add(null);
         items3a.add(null);

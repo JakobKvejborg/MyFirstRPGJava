@@ -20,8 +20,8 @@ import javax.swing.*;
 import java.util.*;
 import java.util.ArrayList;
 
-// Jakob Kvejborg 18/11/23
-// 18:48
+// Jakob Kvejborg 02/01/24
+// 20:19
 
 public class Main {
 
@@ -85,7 +85,7 @@ public class Main {
         System.out.println("- Made by Jakob Kvejborg                                 ");
         System.out.println("_________________________________________________________");
 
-        SaveLoad saveLoadObject = new SaveLoad(); // TODO fix this
+//        SaveLoad saveLoadObject = new SaveLoad(); // TODO fix this
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a name for your hero:");
         String setCharName = scanner.nextLine();
@@ -188,7 +188,7 @@ public class Main {
             boolean firstTimeMessage = true;
             int count = 0;
 //        for (int fightCountDown = 1; fightCountDown <= 9999;) {  // Number of fights before moving on in the storyline
-            while (optionThreeSelected < 3) {
+            while (optionThreeSelected < 3 && char1.getCharCurrentHealth() > 0) {
                 boolean validChoice = false;
                 while (!validChoice) {
 //                    if (char1.charHealth > 0) {
@@ -241,14 +241,14 @@ public class Main {
                                 System.out.println("Error, enter a valid choice.");
                             }
                             break;
-                        case "save":
-                            saveLoadObject.saveGame(character);
-                            break;
-                        case "load":
-                            saveLoadObject.loadGame(character);
-                            char1 = character;
-                            System.out.println(char1.getCharName());
-                            break;
+//                        case "save":
+//                            saveLoadObject.saveGame(character);
+//                            break;
+//                        case "load":
+//                            saveLoadObject.loadGame(character);
+//                            char1 = character;
+//                            System.out.println(char1.getCharName());
+//                            break;
                         case "exit":
                             System.out.println("Closing the game.");
                             System.exit(0);
@@ -348,7 +348,7 @@ public class Main {
             boolean firstTimeMessage2 = true;
             int healingWellCounter = 0;
             int count2 = 0;
-            while (optionThreeSelected2 < 1) {
+            while (optionThreeSelected2 < 1 && char1.getCharCurrentHealth() > 0) {
                 boolean validChoice = false;
                 while (!validChoice) {
                     if (char1.charHealth > 0) {
@@ -488,7 +488,7 @@ public class Main {
             int crossRoadsI3 = 0; // ensures message "you continue" doesn't play the first time around
             boolean firstTimeMessage3 = true;
             int count3 = 0;
-            while (optionThreeSelected3 < 1) {
+            while (optionThreeSelected3 < 1 && char1.getCharCurrentHealth() > 0) {
                 boolean validChoice = false;
                 while (!validChoice) {
                     if (char1.charHealth > 0) {
@@ -593,7 +593,7 @@ public class Main {
             int crossRoadsI4 = 0; // ensures message "you continue" doesn't play the first time around
             boolean firstTimeMessage4 = true;
             int count4 = 0;
-            while (optionFourSelected4 < 1) {
+            while (optionFourSelected4 < 1 && char1.getCharCurrentHealth() > 0) {
                 boolean validChoice = false;
                 while (!validChoice) {
                     if (char1.charHealth > 0) {
