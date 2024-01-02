@@ -6,7 +6,6 @@ import javax.sound.sampled.*;
 public class Audio {
 
     Scanner scanner = new Scanner(System.in);
-
     File file = new File("God.wav");
     AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
     Clip clip = AudioSystem.getClip();
