@@ -123,7 +123,7 @@ public class Encounter {
     // RANDOM DMG MODIFIER (WARLORDS)
     public int randomDamageModifierWarlord() {
         Random randomDmgModifierWarlord = new Random();
-        return randomDmgModifierWarlord.nextInt(14);
+        return randomDmgModifierWarlord.nextInt(15);
     }
 
     // RANDOM DMG MODIFIER (NIGHTMARE) + FROST
@@ -147,13 +147,13 @@ public class Encounter {
     // RANDOM DMG MODIFIER TERROR + HELLISH
     public int randomDamageModifierTerror() {
         Random randomDamageModifierTerror = new Random();
-        return randomDamageModifierTerror.nextInt(150);
+        return randomDamageModifierTerror.nextInt(163);
     }
 
     // RANDOM DMG MODIFIER FINAL BOSS
     public int randomDamageModifierFinalBoss() {
         Random randomDamageModifierFinalBoss = new Random();
-        return randomDamageModifierFinalBoss.nextInt(699);
+        return randomDamageModifierFinalBoss.nextInt(719);
     }
 
 
@@ -174,10 +174,14 @@ public class Encounter {
             randomDamageModifier = randomDamageModifierAct2Boss();
         } else if (monsterNameLowerCase.contains("hidden entity")) {
             randomDamageModifier = randomDamageModifierAct2Boss();
+        } else if (monsterNameLowerCase.contains("elite")) {
+            randomDamageModifier = randomDamageModifierWarlord();
         } else if (monsterNameLowerCase.contains("hero")) {
             randomDamageModifier = randomDamageModifierFinalBoss();
         } else if (monsterNameLowerCase.contains("terror")) {
             randomDamageModifier = randomDamageModifierTerror();
+        } else if (monsterNameLowerCase.contains("corrupted")) {
+            randomDamageModifier = randomDamageModifierFinalBoss();
         }
 
         return (baseMonsterDamage + randomDamageModifier);

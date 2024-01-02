@@ -14,6 +14,7 @@ public class ListOfMonsters {
     ArrayList<Monster> monsters5 = new ArrayList<>();
     ArrayList<Monster> monsters6 = new ArrayList<>();
     ArrayList<Monster> monsters7 = new ArrayList<>();
+    ArrayList<Monster> monsters8 = new ArrayList<>();
 
     public ListOfMonsters() {
         // FIXED MONSTER LIST BOSSES
@@ -29,7 +30,7 @@ public class ListOfMonsters {
         act3BossList.add(act3Boss);
 
         // FINAL BOSS MONSTER LIST
-        finalBoss.add(new Monster(9999, 180, "Corrupted Hero", 999));
+        finalBoss.add(new Monster(9999, 160, "Corrupted Hero", 999));
 
         // RANDOM MONSTER LIST (WEAK)     // weak - common  - Warlords - normal - nightmare - Act2Boss - Frost - Act3Boss - elite - terror - hellish - corrupted
         monsters1.add(new Monster(3, 2, "Weak Goblin", 2));
@@ -139,5 +140,15 @@ public class ListOfMonsters {
         monsters7.add(new Monster(1833, 190, "Terror Dragon", 234));
         monsters7.add(new Monster(1533, 130, "Terror Warlock", 164));
         monsters7.add(new Monster(1500, 240, "Terror Beast", 250));
+
+        // RANDOM MONSTER LIST (CORRUPTED)   // weak - common  - Warlords - normal - nightmare - Act2Boss - Frost - Act3Boss - elite - terror - hellish - corrupted
+        monsters8.add(new Monster(2144, 20, "Corrupted Behemoth", 224));
+        monsters8.add(new Monster(2266, 20, "Corrupted Soulless", 225));
+        monsters8.add(new Monster(1955, 20, "Corrupted Nightmare", 222));
+        monsters8.add(new Monster(2255, 20, "Corrupted Demon", 222));
+        monsters8.add(new Monster(1944, 20, "Corrupted Knight", 234));
+        monsters8.add(new Monster(2766, 20, "Corrupted Unspoken", 245));
+        monsters8.add(new Monster(2655, 20, "Corrupted Warlord", 252));
+        monsters8.add(new Monster(2655, 20, "Corrupted Firemaw", 182));
     }
 }

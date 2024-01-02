@@ -42,6 +42,7 @@ public class Main {
 
     public static void gameOver(RpgChar rpgChar) {
         if (rpgChar.charHealth <= 0) {
+            System.out.println();
             System.out.println("You have been slain. You lay in a pool of your own blood. Game over.");
             System.exit(0);
         }
@@ -62,8 +63,6 @@ public class Main {
 
 
 
-
-
         SwingUtilities.invokeLater(() -> {
 //                    GUI gui = new GUI(); // Creating GUI instance
 
@@ -72,15 +71,13 @@ public class Main {
                 });
 
 
-
-
 //        _________________________________________________________________________________
 
 
         // GAME START
         System.out.println("_________________________________________________________");
         System.out.println("                       Welcome to                        ");
-        System.out.println("         ~~ \"A Programmers Console Adventure!\" ~~      ");
+        System.out.println("           ~~ \"H e r o  C o r r u p t e d\" ~~          ");
         System.out.println("                        A C T   1                        ");
         System.out.println("- Made by Jakob Kvejborg                                 ");
         System.out.println("_________________________________________________________");
@@ -123,9 +120,9 @@ public class Main {
         gameOver(char1);
 
 
-        // ADDS FIXED ITEM TO CHAR
-//        char1.addItem(item1); // adds the item directly to the hero // use this for testing only
-//        Item item1 = new Item(0, 0, 90, "hey", "Helm", 0, 0, 0, 0, 0, 0);
+        // ADDS FIXED ITEM TO CHAR (TEST ITEMS)
+//        char1.addItem(loi.item1); // adds the item directly to the hero // use this for testing only
+//        Item item1 = new Item(666, 0, 999, "hey", "Helm", 0, 777, 0, 0, 222);
 //        char1.addItemToInventory(item1);  // adds item 1 to the inventory
 //        System.out.println("Item \"" + item1.getItemName() + "\" dropped.");
 
@@ -317,10 +314,10 @@ public class Main {
             System.out.println();
             System.out.println("_________________________________________________________________________________________________");
             System.out.println();
-            System.out.println("    Having defeated the 3 Warlords, the hero savor a moment of newfound strength and relief, ");
-            System.out.println("      only to be interrupted by an unsettling feeling that something much more sinister ");
-            System.out.println("                            awaits just beyond the horizon.");
-            System.out.println("                                       A C T   2");
+            System.out.println("    Having defeated the 3 Warlords, the hero savor a moment of newfound strength and relief,     ");
+            System.out.println("      only to be interrupted by an unsettling feeling that something much more sinister          ");
+            System.out.println("                            awaits just beyond the horizon.                                      ");
+            System.out.println("                                       A C T   2                                                 ");
             System.out.println();
             System.out.println("_________________________________________________________________________________________________");
             System.out.println();
@@ -448,9 +445,9 @@ public class Main {
             System.out.println();
             System.out.println("_________________________________________________________________________________________________");
             System.out.println();
-            System.out.println("                  The hero doesn't celebrate his victory, not this time.              ");
-            System.out.println("                             No glory was found in this battle.                       ");
-            System.out.println("                                   Only death awaits.                                   ");
+            System.out.println("                  The hero doesn't celebrate his victory, not this time.                         ");
+            System.out.println("                             No glory was found in this battle.                                  ");
+            System.out.println("                                   Only death awaits.                                            ");
             System.out.println("                                       A C T   3");
             System.out.println();
             System.out.println("_________________________________________________________________________________________________");
@@ -562,9 +559,9 @@ public class Main {
             System.out.println();
             System.out.println("_________________________________________________________________________________________________");
             System.out.println();
-            System.out.println("                   The evil of this mountain has been slain by the hero.              ");
-            System.out.println("                    On the brink of madness, he fights through the pain.                                                    ");
-            System.out.println("                                  Was it all for nothing?                                   ");
+            System.out.println("                   The evil of this mountain has been slain by the hero.                         ");
+            System.out.println("                    On the brink of madness, he fights through the pain.                         ");
+            System.out.println("                                  Was it all for nothing?                                        ");
             System.out.println("                                       A C T   4");
             System.out.println();
             System.out.println("_________________________________________________________________________________________________");
@@ -601,30 +598,31 @@ public class Main {
                             System.out.println("Take step into one of the portals:");
                             firstTimeMessage4 = false;
                         }
-                        if (crossRoadsI4 > 1) {
-                            System.out.println("Choose a path:");
-                        }
-                        if (finalBossCounter == 20) {
+                        if (finalBossCounter == 30) {
                             try {
                                 Thread.sleep(2000);
                             } catch (Exception e) {
                             }
                             System.out.println("A final portal has opened. Be careful hero, and good luck.");
                             try {
-                                Thread.sleep(3000);
+                                Thread.sleep(3100);
                             } catch (Exception e) {
                             }
                         }
+                        if (crossRoadsI4 > 1) {
+                            System.out.println("Choose a path:");
+                        }
                         System.out.println("1. Annihilate the monsters in the forest.");
-                        System.out.println("2. Enter the dungeon of the first castle.");
+                        System.out.println("2. This portal leads to the dungeon of the first castle.");
                         System.out.println("3. Slay the monsters surrounding the tall tower");
                         System.out.println("4. The tower still stands, enter it and defeat the nightmares inside.");
                         System.out.println("5. Enter the cold mountain pathwaths and fight the frost demons.");
                         System.out.println("6. Elite monsters have followed your trail and are now blocking the exit. Slay them.");
                         System.out.println("7. Hellish fire burns from this portal.");
+                        System.out.println("8. This portal opens directly to Hell.");
 
-                        if (finalBossCounter > 19) { // ensures message "you continue" doesn't play the first time around
-                            System.out.println("8. ??????????");
+                        if (finalBossCounter > 29) { // ensures message "you continue" doesn't play the first time around
+                            System.out.println("9. ??????????");
                         }
                         System.out.println("i. Open inventory.");
 
@@ -661,17 +659,25 @@ public class Main {
                                 Encounter xtenthEncounter = new Encounter(char1, lom.monsters6, loi.items5); // Elite monsters
                                 xtenthEncounter.performEncounter();
                                 break;
-                            case "7": // Terror monsters
-                                Encounter terrorEncounter = new Encounter(char1, lom.monsters7, loi.items6);
+                            case "7":
+                                Encounter terrorEncounter = new Encounter(char1, lom.monsters7, loi.items6); // Terror monsters
                                 terrorEncounter.performEncounter();
                                 break;
                             case "8":
-                                if (finalBossCounter > 19) {
+                                Encounter corruptedEncounter = new Encounter(char1, lom.monsters8, loi.items7); // Corrupted monsters
+                                corruptedEncounter.performEncounter();
+                                break;
+                            case "9":
+                                if (finalBossCounter > 29) {
                                     lastFrameBoss = new WarlordFrame("curropted.JPG");
-                                    Encounter lastEncounter = new Encounter(char1, lom.finalBoss, loi.items6);
+                                    Encounter lastEncounter = new Encounter(char1, lom.finalBoss, loi.items6); // Final boss
                                     lastEncounter.performEncounter();
                                     lastFrameBoss.dispose();
                                     imageAct4.dispose();
+                                    gameOver(char1);
+                                    waitThreeSeconds();
+                                    System.out.println();
+                                    System.out.println("_________________________________________________________");
                                     System.out.println("The hero has succeeded. Before him lies a corrupted soul, once a hero.");
                                     System.out.println("He takes a seat near the bloody corpse but feels no different.");
                                     System.out.println("From his wounds runs black blood. Perhaps the evil has indeed reached him?");
@@ -681,6 +687,7 @@ public class Main {
                                     System.out.println();
                                     System.out.println("\"Congratulations on your victory! Thank you for playing my game.\"");
                                     System.out.println(" - Made by Jakob Kvejborg 2023.");
+                                    System.out.println("_________________________________________________________");
                                     // PRESS ENTER TO CONTINUE
                                     Item.pressEnterToContinue();
                                 } else {
@@ -693,7 +700,7 @@ public class Main {
                                 break;
                         }
                         validChoice = true;
-                        if (switchBoss.equals("1") || switchBoss.equals("2") || switchBoss.equals("3") || switchBoss.equals("4") || switchBoss.equals("5") || switchBoss.equals("6") || switchBoss.equals("7")) {
+                        if (switchBoss.equals("1") || switchBoss.equals("2") || switchBoss.equals("3") || switchBoss.equals("4") || switchBoss.equals("5") || switchBoss.equals("6") || switchBoss.equals("7") || switchBoss.equals("8")) {
                             finalBossCounter++;
                         }
                     } else {

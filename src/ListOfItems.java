@@ -11,6 +11,7 @@ public class ListOfItems {
     public ArrayList<Item> items4 = new ArrayList<>();    // power level of items = items1-99
     public ArrayList<Item> items5 = new ArrayList<>();    // power level of items = items1-99
     public ArrayList<Item> items6 = new ArrayList<>();    // power level of items = items1-99
+    public ArrayList<Item> items7 = new ArrayList<>();    // power level of items = items1-99
 
     public ListOfItems() {
         // FIXED ITEM LIST (TEST ITEMS)
@@ -297,13 +298,17 @@ public class ListOfItems {
         items3a.add(new Item(5, 15, 9, "Helm of Vampire", "Helm", 0, 0, 0, 0, 6));
         items3a.add(new Item(0, 28, 0, "Flail of Hunger LH", "WeaponL1", 0, 0, 0, 3, 15));
         items3a.add(new Item(10, 19, 6, "Bracers of Steel", "Bracers", 0, 0, 2, 0, 0));
-        items3a.add(new Item(0, 19, 12, "Leggings of Gold", "Leggings", 0, 23, 0, 0, 0));
+        items3a.add(new Item(0, 19, 12, "Leggings of Frost", "Leggings", 0, 23, 0, 0, 0));
         items3a.add(new Item(0, 19, 14, "Amulet of Gold", "Amulet", 0, 0, 0, 0, 0));
         items3a.add(new Item(0, 15, 15, "Gloves of Gold", "Gloves", 0, 0, 0, 0, 0));
         items3a.add(new Item(2, 21, 11, "Gloves of Pain", "Gloves", 0, 20, 3, 0, 5));
         items3a.add(new Item(10, 23, 12, "Leggings of Smashing", "Leggings", 0, 33, 0, 0, 0));
-        items3a.add(new Item(0, 26, 12, "Amulet of Shrines", "Amulet", 0, 25, 0, 0, 9));
+        items3a.add(new Item(0, 26, 12, "Amulet of Frost", "Amulet", 0, 25, 0, 0, 9));
         items3a.add(new Item(2, 5, 3, "Shoulders of Blood", "Shoulders", 0, 4, 1, 0, 11));
+        items3a.add(new Item(4, 31, 6, "Bracers of Frost", "Bracers", 0, 10, 2, 0, 12));
+        items3a.add(new Item(0, 34, 0, "Mace of Frost RH", "WeaponR1", 0, 50, 1, 5, 11));
+        items3a.add(null);
+        items3a.add(null);
         items3a.add(null);
         items3a.add(null);
         items3a.add(null);
@@ -522,6 +527,73 @@ public class ListOfItems {
         items6.add(null);
         items6.add(null);
         items6.add(null);
+
+        // RANDOM ITEM LIST 7 GODLY ITEMS CORRUPTED MONSTERS
+        items7.add(new Item(18, 55, 35, "Helm of God", "Helm", 0, 111, 0, 0, 20));
+        items7.add(new Item(22, 55, 35, "Bracers of God", "Bracers", 0, 111, 0, 0, 15));
+        items7.add(new Item(0, 55, 25, "Amulet of God", "Amulet", 0, 111, 25, 0, 15));
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
+        items7.add(null);
 
     }
 }
