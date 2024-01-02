@@ -21,7 +21,7 @@ public class ListOfMonsters {
         Monster warlordKoold = new Monster(64, 14, "Warlord Koold", 24);
         Monster warlordYdris = new Monster(88, 20, "Warlord Ydris", 33);
         Monster act2Boss = new Monster(666, 72, "Abaddon, Fallen Angel", 88);
-        Monster act3Boss = new Monster(2000, 152, "Hidden Entity", 110);
+        Monster act3Boss = new Monster(2000, 149, "Hidden Entity", 110);
         warlordMandaList.add(warlordManda);
         warlordKooldList.add(warlordKoold);
         warlordYdrisList.add(warlordYdris);
@@ -110,6 +110,7 @@ public class ListOfMonsters {
         monsters5.add(new Monster(202, 75, "Frost Giant", 60));
         monsters5.add(new Monster(123, 80, "Frost Elemental", 50));
         monsters5.add(new Monster(154, 94, "Frost Horror", 88));
+        monsters5.add(new Monster(210, 91, "Frost Bohemoth", 102));
 
         // RANDOM MONSTER LIST ELITES
         monsters6.add(new Monster(1244, 222, "Elite Hellspawn", 114));

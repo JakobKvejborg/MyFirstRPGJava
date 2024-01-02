@@ -109,7 +109,7 @@ public class Encounter {
     public void monsterDefeated(Monster encounteredMonster, int randomMonsterIndex) {
         System.out.println();
         System.out.println("You defeated the " + encounteredMonster.getMonsterName() + "!");
-        System.out.println("You gained " + blueColor + encounteredMonster.monsterExperience + resetColor + " XP");
+        System.out.println("You gained " + blueColor + encounteredMonster.monsterExperience + resetColor + " XP.");
         character.charGainExperience(encounteredMonster);  // XP gained
         System.out.println();
         // ITEM FIND
@@ -197,6 +197,11 @@ public class Encounter {
             System.out.println("Your armor blocks " + character.getCharDefense() + " damage.");
             playerHealth = playerHealth - enemyDamage;
             character.charHealth = playerHealth;
+            System.out.println(); // delete
+            System.out.println("The monster actually deals: " + enemyDamage + " damage"); // delete
+            System.out.println("Your health is now: " + playerHealth); // delete
+            System.out.println("Your health SHOULD be: " + ((playerHealth - enemyDamageRaw) + character.getCharDefense())); // delete
+
 
             System.out.println(character.getCharName() + getHealthColor(playerHealth) + " (" + playerHealth + ")" + resetColor);     // the 'if' statement is armor-based
         } else {  // PLAYER ARMOR IS HIGHER THAN ENEMY'S DAMAGE
@@ -257,8 +262,14 @@ public class Encounter {
                         }
                         System.out.println("You lifesteal: " + greenColor + (int) lifeStealAmount + resetColor + " hp.");
                         playerHealth = playerHealth + (int) lifeStealAmount;
+                        System.out.println(); // delete
+                        System.out.println("You should lifesteal: " + lifeStealAmount); // delete
+                        System.out.println("Your health should be: " + (playerHealth + lifeStealAmount));
                         if (playerHealth >= character.getCharMaxHealth()) {   // ENSURES PLAYER HEALTH NEVER LIFESTEALS MORE THAN MAXHEALTH
                             character.charHealth = character.getCharMaxHealth();
+                            System.out.println(); // delete
+                            System.out.println("You are fully healed by your lifesteal. Your max hp should be: " + character.getCharMaxHealth()); // delete
+                            System.out.println("Your current hp should be: " + character.getCharCurrentHealth()); // delete
                         }
                     }
 
@@ -344,9 +355,9 @@ public class Encounter {
 
                     System.out.println(encounteredMonster.getMonsterName() + getMonsterHealthColor(enemyHealth) + " (" + enemyHealth + ")" + resetColor);
 
-                    String monsterNameLowerCase = encounteredMonster.getMonsterName().toLowerCase();
-                    int enemyDamageM = calculateMonsterDamage(encounteredMonster, monsterNameLowerCase) - character.getCharDefense();
-                    int enemyDamageRawM = calculateMonsterDamage(encounteredMonster, monsterNameLowerCase); // because enemyDamage can be negative if the player denfense is high
+//                    String monsterNameLowerCase = encounteredMonster.getMonsterName().toLowerCase();
+//                    int enemyDamageM = calculateMonsterDamage(encounteredMonster, monsterNameLowerCase) - character.getCharDefense();
+//                    int enemyDamageRawM = calculateMonsterDamage(encounteredMonster, monsterNameLowerCase); // because enemyDamage can be negative if the player denfense is high
 
                     if (enemyHealth <= 0) {  // MONSTER IS DEFEATED
                         monsterDefeated(encounteredMonster, randomMonsterIndex);

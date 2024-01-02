@@ -82,7 +82,7 @@ public class Main {
         System.out.println("                       Welcome to                        ");
         System.out.println("         ~~ \"A Programmers Console Adventure!\" ~~      ");
         System.out.println("                        A C T   1                        ");
-        System.out.println("- Made by Jakob Kvejborg                                ");
+        System.out.println("- Made by Jakob Kvejborg                                 ");
         System.out.println("_________________________________________________________");
 
         SaveLoad saveLoadObject = new SaveLoad(); // TODO fix this
@@ -514,7 +514,7 @@ public class Main {
                                 break;
                             // _________
                             case "1":
-                                Encounter ninthEncounter = new Encounter(char1, lom.monsters5, loi.items3); // Frost monster
+                                Encounter ninthEncounter = new Encounter(char1, lom.monsters5, loi.items3a); // Frost monster
                                 ninthEncounter.performEncounter();
                                 break;
 
@@ -650,11 +650,11 @@ public class Main {
                                 xsixthEncounter.performEncounter();
                                 break;
                             case "4":
-                                Encounter xseventhEncounter = new Encounter(char1, lom.monsters4, loi.items3); // nightmare monster
+                                Encounter xseventhEncounter = new Encounter(char1, lom.monsters4, loi.items3); // Nightmare monster
                                 xseventhEncounter.performEncounter();
                                 break;
                             case "5":
-                                Encounter xninthEncounter = new Encounter(char1, lom.monsters5, loi.items3);
+                                Encounter xninthEncounter = new Encounter(char1, lom.monsters5, loi.items3a); // Frost monsters
                                 xninthEncounter.performEncounter();
                                 break;
                             case "6":
@@ -672,7 +672,7 @@ public class Main {
                                     lastEncounter.performEncounter();
                                     lastFrameBoss.dispose();
                                     imageAct4.dispose();
-                                    System.out.println("The hero has succeded. Before him lies a corrupted soul, once a hero.");
+                                    System.out.println("The hero has succeeded. Before him lies a corrupted soul, once a hero.");
                                     System.out.println("He takes a seat near the bloody corpse but feels no different.");
                                     System.out.println("From his wounds runs black blood. Perhaps the evil has indeed reached him?");
                                     System.out.println("With one final sigh of relief, the hero removes the helmet of the body laying before him, and puts it on.");
