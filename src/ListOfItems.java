@@ -40,7 +40,7 @@ public class ListOfItems {
         items1.add(new Item(0, 2, 1, "Bracers of Lifesteal", "Bracers", 0, 0, 0, 0, 10));
         items1.add(new Item(3, 2, 2, "Shoulders of Defense", "Shoulders", 0, 0, 0, 0, 0));
         items1.add(new Item(0, 1, 1, "Leggings of Health", "Leggings", 0, 5, 0, 0, 0));
-        items1.add(new Item(2, 0, 2, "Shoulders of Lifesteal", "Shoulders", 0, 0, 0, 0, 9));
+        items1.add(new Item(1, 0, 2, "Shoulders of Lifesteal", "Shoulders", 0, 0, 0, 0, 5));
         items1.add(new Item(1, 0, 2, "Belt of Lifesteal", "Belt", 0, 0, 0, 0, 10));
         items1.add(new Item(4, 0, 1, "Shoulders of Strength", "Shoulders", 0, 0, 0, 0, 0));
         items1.add(new Item(0, 0, 0, "Small Axe RH", "WeaponR1", 0, 0, 0, 2, 0));
@@ -109,7 +109,7 @@ public class ListOfItems {
         items1a.add(new Item(2, 6, 6, "Armor of Sand", "Armor", 0, 5, 0, 0, 0));
         items1a.add(new Item(0, 6, 2, "Amulet of Sand", "Amulet", 0, 8, 0, 0, 5));
         items1a.add(new Item(0, 8, 0, "Claymore of Sand LH", "WeaponL1", 0, 10, 0, 3, 0));
-        items1a.add(new Item(4, 8, 5, "Shoulders of Sand", "Shoulders", 0, 20, 0, 0, 13));
+        items1a.add(new Item(4, 8, 5, "Shoulders of Sand", "Shoulders", 0, 20, 0, 0, 8));
         items1a.add(new Item(0, 10, 0, "Dagger of Sand LH", "WeaponL1", 0, 0, 1, 4, 10));
         items1a.add(new Item(0, 7, 0, "Mace of Sand RH", "WeaponR1", 0, 10, 1, 2, 7));
         items1a.add(null);
@@ -168,6 +168,7 @@ public class ListOfItems {
         items2.add(new Item(0, 12, 0, "Flame Mace RH", "WeaponR1", 0, 0, 0, 4, 9));
         items2.add(new Item(2, 30, 3, "Bracers of Hunger", "Bracers", 0, 0, 0, 0, 8));
         items2.add(new Item(0, 13, 0, "Ring of Plenty R2", "Ring2", 0, 20, 1, 0, 7));
+        items2.add(new Item(1, 0, 4, "Shoulders of Vampire", "Shoulders", 0, 0, 0, 0, 10));
         items2.add(null);
         items2.add(null);
         items2.add(null);
@@ -304,7 +305,7 @@ public class ListOfItems {
         items3a.add(new Item(2, 21, 11, "Gloves of Pain", "Gloves", 0, 20, 3, 0, 5));
         items3a.add(new Item(10, 23, 12, "Leggings of Smashing", "Leggings", 0, 33, 0, 0, 0));
         items3a.add(new Item(0, 26, 12, "Amulet of Frost", "Amulet", 0, 25, 0, 0, 9));
-        items3a.add(new Item(2, 5, 3, "Shoulders of Blood", "Shoulders", 0, 4, 1, 0, 11));
+        items3a.add(new Item(2, 5, 5, "Shoulders of Blood", "Shoulders", 0, 4, 1, 0, 12));
         items3a.add(new Item(4, 31, 6, "Bracers of Frost", "Bracers", 0, 10, 2, 0, 12));
         items3a.add(new Item(0, 34, 0, "Mace of Frost RH", "WeaponR1", 0, 50, 1, 5, 11));
         items3a.add(null);
