@@ -397,6 +397,7 @@ public class ListOfItems {
         items5.add(new Item(15, 25, 8, "Ring of Darkness R1", "Ring1", 3, 35, 2, 0, 10));
         items5.add(new Item(0, 25, 12, "Shoulders of Darkness", "Shoulders", 3, 25, 5, 0, 10));
         items5.add(new Item(0, 25, 5, "Amulet of Darkness", "Amulet", 4, 30, 5, 0, 8));
+        items5.add(new Item(3, 25, 7, "Gloves of Darkness", "Gloves", 1, 35, 1, 0, 8));
         items5.add(null);
         items5.add(null);
         items5.add(null);
@@ -466,6 +467,7 @@ public class ListOfItems {
         items6.add(new Item(18, 45, 16, "Leggings of Chaos", "Leggings", 0, 70, 5, 0, 10));
         items6.add(new Item(18, 45, 7, "Ring of Chaos R1", "Ring1", 4, 75, 2, 0, 15));
         items6.add(new Item(0, 45, 13, "Shoulders of Chaos", "Shoulders", 0, 55, 5, 0, 20));
+        items6.add(new Item(5, 45, 15, "Gloves of Chaos", "Gloves", 3, 50, 5, 0, 12));
         items6.add(null);
         items6.add(null);
         items6.add(null);

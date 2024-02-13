@@ -34,7 +34,7 @@ public class ListOfMonsters {
 
         // RANDOM MONSTER LIST (WEAK)     // weak - common  - Warlords - normal - nightmare - Act2Boss - Frost - Act3Boss - elite - terror - hellish - corrupted
         monsters1.add(new Monster(3, 2, "Weak Goblin", 2));
-        monsters1.add(new Monster(3, 1, "Weak Imp", 1));
+        monsters1.add(new Monster(4, 1, "Weak Imp", 1));
         monsters1.add(new Monster(3, 3, "Weak Knight", 2));
         monsters1.add(new Monster(6, 1, "Weak Stone Imp", 2));
         monsters1.add(new Monster(4, 2, "Weak Soldier", 2));
@@ -43,7 +43,7 @@ public class ListOfMonsters {
         monsters1.add(new Monster(5, 1, "Weak Undead", 3));
         monsters1.add(new Monster(4, 2, "Weak Lancer", 2));
         monsters1.add(new Monster(7, 1, "Weak Bat", 3));
-        monsters1.add(new Monster(3, 1, "Weak Leech", 4));
+        monsters1.add(new Monster(4, 1, "Weak Leech", 4));
         monsters1.add(new Monster(5, 2, "Weak Stinger", 1));
         monsters1.add(new Monster(8, 1, "Weak Flesheater", 3));
         monsters1.add(new Monster(5, 1, "Weak Thief", 4));
@@ -51,20 +51,20 @@ public class ListOfMonsters {
         monsters1.add(new Monster(4, 2, "Weak Drake", 4));
         monsters1.add(new Monster(5, 2, "Weak Demon", 4));
         monsters1.add(new Monster(4, 1, "Weak Warlock", 2));
-        monsters1.add(new Monster(4, 2, "Weak Cultist", 2));
-        monsters1.add(new Monster(5, 1, "Weak Beast", 3));
+        monsters1.add(new Monster(5, 2, "Weak Cultist", 2));
+        monsters1.add(new Monster(6, 1, "Weak Beast", 3));
 
 
         // RANDOM MONSTER LIST (COMMON)
-        monsters2.add(new Monster(7, 4, "Common Flayer", 8));
+        monsters2.add(new Monster(7, 6, "Common Flayer", 8));
         monsters2.add(new Monster(11, 3, "Common Thief", 7));
         monsters2.add(new Monster(9, 3, "Common Goblin", 6));
         monsters2.add(new Monster(9, 3, "Common Knight", 6));
         monsters2.add(new Monster(11, 5, "Common Clayer", 7));
-        monsters2.add(new Monster(12, 3, "Common Golem", 7));
+        monsters2.add(new Monster(14, 3, "Common Golem", 7));
         monsters2.add(new Monster(11, 3, "Common Stone Golem", 6));
         monsters2.add(new Monster(9, 4, "Common Undead", 8));
-        monsters2.add(new Monster(11, 5, "Common Skeleton", 9));
+        monsters2.add(new Monster(11, 6, "Common Skeleton", 9));
         monsters2.add(new Monster(13, 4, "Common Demon", 10));
 
         // RANDOM MONSTER LIST (NORMAL)    // weak - common  - Warlords - normal - nightmare - Act2Boss - Frost - Act3Boss - elite - terror - hellish - corrupted
