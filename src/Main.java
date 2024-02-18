@@ -19,11 +19,15 @@
 import javax.swing.*;
 import java.util.*;
 import java.util.ArrayList;
+import java.util.concurrent.CountDownLatch;
 
 // Jakob Kvejborg 02/01/24
 // 20:19
 
 public class Main {
+
+    private static GUI gui;
+    private static CountDownLatch latch = new CountDownLatch(1);
 
     //    WAIT METHODS
     public static void waitThreeSeconds() {
@@ -48,10 +52,12 @@ public class Main {
         }
     }
 
-    public void showGUI() {
+    public static void showGUI() {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-//                new GUI();
+                StoryText storyText = new StoryText();
+                gui = new GUI(storyText);
+                latch.countDown();
             }
         });
     }
@@ -62,16 +68,23 @@ public class Main {
 //        _______________________________________________________________________________
 
 
-
-        SwingUtilities.invokeLater(() -> {
+//        SwingUtilities.invokeLater(() -> {
 //                    GUI gui = new GUI(); // Creating GUI instance
 
 //                    gui.showWelcomeMessage(); // Display the welcome message in the GUI
 //                    String heroName = gui.askForHeroName(); // Get hero name from user via GUI
-                });
+//                });
 
 
 //        _________________________________________________________________________________
+
+//        showGUI(); GUI work in progress
+
+        try {
+            latch.await(); // Wait for the GUI to be initialized
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
 
         // GAME START
