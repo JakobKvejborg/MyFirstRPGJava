@@ -51,10 +51,12 @@ public class ListOfItems {
         items1.add(new Item(0, 1, 0, "Sword of Dust LH", "WeaponL1", 0, 0, 0, 3, 7));
         items1.add(new Item(0, 2, 2, "Helm of Rust", "Helm", 0, 5, 0, 0, 0));
         items1.add(new Item(0, 1, 1, "Amulet of Rust", "Amulet", 0, 0, 1, 0, 0));
-        items1.add(new Item(2, 0, 1, "Helm of Lifesteal", "Helm", 0, 6, 0, 0, 8));
+        items1.add(new Item(2, 0, 1, "Helm of Lifesteal", "Helm", 0, 6, 0, 0, 6));
         items1.add(new Item(0, 0, 1, "Ring of Silver R2", "Ring2", 0, 5, 1, 0, 0));
         items1.add(new Item(0, 1, 1, "Spiked Shield RH", "WeaponR1", 0, 2, 0, 1, 0));
         items1.add(new Item(0, 1, 1, "Wizards Hat", "Helm", 0, 0, 3, 0, 0));
+        items1.add(null);
+        items1.add(null);
         items1.add(null);
         items1.add(null);
         items1.add(null);
@@ -220,11 +222,12 @@ public class ListOfItems {
         itemsWarlords.add(null);
 
         // RANDOM ITEMS LIST 3
+        Item armorOfGold = new Item(4, 4, 12, "Armor of Gold", "Armor", 0, 11, 2, 0, 0);
         items3.add(new Item(8, 1, 3, "Helm of Strong", "Helm", 0, 0, 5, 0, 0));
         items3.add(new Item(5, 5, 14, "Armor of Illness", "Armor", 0, 0, 4, 0, 0));
         items3.add(new Item(1, 4, 8, "Ring of Defense R1", "Ring1", 0, 1, 3, 0, 5));
         items3.add(new Item(3, 3, 7, "Armor of Metal", "Armor", 0, 28, 4, 0, 0));
-        items3.add(new Item(4, 4, 12, "Armor of Gold", "Armor", 0, 11, 2, 0, 0));
+        items3.add(armorOfGold);
         items3.add(new Item(6, 9, 10, "Armor of Rock", "Armor", 0, 4, 4, 0, 0));
         items3.add(new Item(5, 3, 1, "Ring of Strength R2", "Ring2", 0, 0, 0, 0, 0));
         items3.add(new Item(0, 11, 0, "Small Dagger of Life LH", "WeaponL1", 0, 0, 0, 2, 13));
@@ -293,11 +296,11 @@ public class ListOfItems {
         items3a.add(new Item(5, 5, 14, "Armor of Illness", "Armor", 0, 0, 4, 0, 0));
         items3a.add(new Item(1, 4, 8, "Ring of Defense R1", "Ring1", 0, 1, 3, 0, 5));
         items3a.add(new Item(3, 3, 7, "Armor of Metal", "Armor", 0, 28, 4, 0, 0));
-        items3a.add(new Item(4, 4, 12, "Armor of Gold", "Armor", 0, 11, 2, 0, 0));
+        items3a.add(armorOfGold);
         items3a.add(new Item(6, 9, 10, "Armor of Rock", "Armor", 0, 4, 4, 0, 0));
         items3a.add(new Item(5, 3, 1, "Ring of Strength R2", "Ring2", 0, 0, 0, 0, 0));
         items3a.add(new Item(5, 15, 9, "Helm of Vampire", "Helm", 0, 0, 0, 0, 6));
-        items3a.add(new Item(0, 28, 0, "Flail of Hunger LH", "WeaponL1", 0, 0, 0, 3, 15));
+        items3a.add(new Item(0, 28, 0, "Flail of Hunger LH", "WeaponL1", 0, 0, 0, 3, 14));
         items3a.add(new Item(10, 19, 6, "Bracers of Steel", "Bracers", 0, 0, 2, 0, 0));
         items3a.add(new Item(0, 19, 12, "Leggings of Frost", "Leggings", 0, 23, 0, 0, 0));
         items3a.add(new Item(0, 19, 14, "Amulet of Gold", "Amulet", 0, 0, 0, 0, 0));
@@ -308,6 +311,9 @@ public class ListOfItems {
         items3a.add(new Item(2, 5, 5, "Shoulders of Blood", "Shoulders", 0, 4, 1, 0, 12));
         items3a.add(new Item(4, 31, 6, "Bracers of Frost", "Bracers", 0, 10, 2, 0, 12));
         items3a.add(new Item(0, 34, 0, "Mace of Frost RH", "WeaponR1", 0, 50, 1, 5, 11));
+        items3a.add(new Item(0, 32, 0, "Flail of Spikes LH", "WeaponL1", 0, 32, 0, 4, 16));
+        items3a.add(null);
+        items3a.add(null);
         items3a.add(null);
         items3a.add(null);
         items3a.add(null);

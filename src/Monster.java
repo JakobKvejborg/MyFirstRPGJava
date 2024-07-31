@@ -14,14 +14,8 @@ public class Monster {
         this.monsterAttack = monsterAttack;
         this.monsterName = monsterName;
         this.monsterExperience = monsterExperience;
-//        this.monsterDamageModifier = generateRandomDamageModifier();
     }
 
-    // RANDOM MONSTER DAMAGE MODIFIER DETE
-//    private int generateRandomDamageModifier() {
-//        Random randomDmgMod = new Random();
-//        return randomDmgMod.nextInt(1) - 1;
-//    }
 
 
     // MONSTER GETTERS

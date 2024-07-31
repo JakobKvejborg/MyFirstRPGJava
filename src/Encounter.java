@@ -338,18 +338,11 @@ public class Encounter {
                         playerHealth = character.getCharMaxHealth(); // Ensure player health doesn't exceed maximum
                     }
 
-//                    printCombatOptions();
 
-
-//
 //
 //___________________________________________
 
                     System.out.println(encounteredMonster.getMonsterName() + getMonsterHealthColor(enemyHealth) + " (" + enemyHealth + ")" + resetColor);
-
-//                    String monsterNameLowerCase = encounteredMonster.getMonsterName().toLowerCase();
-//                    int enemyDamageM = calculateMonsterDamage(encounteredMonster, monsterNameLowerCase) - character.getCharDefense();
-//                    int enemyDamageRawM = calculateMonsterDamage(encounteredMonster, monsterNameLowerCase); // because enemyDamage can be negative if the player denfense is high
 
                     if (enemyHealth <= 0) {  // MONSTER IS DEFEATED
                         monsterDefeated(encounteredMonster, randomMonsterIndex);
@@ -370,7 +363,6 @@ public class Encounter {
 
                 case "i":        // PLAYER OPENS INVENTORY
                     inventoryObject.InventoryOverall();
-//                System.out.println(encounteredMonster.getMonsterName() + getMonsterHealthColor(enemyHealth) + " (" + enemyHealth + ")" + resetColor);
                     System.out.println(encounteredMonster.getMonsterName() + getMonsterHealthColor(enemyHealth) + " (" + enemyHealth + ")" + resetColor);
                     System.out.println(character.getCharName() + getHealthColor(playerHealth) + " (" + playerHealth + ")" + resetColor);
                     printCombatOptions();

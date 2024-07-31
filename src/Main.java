@@ -26,7 +26,6 @@ import java.util.concurrent.CountDownLatch;
 
 public class Main {
 
-    private static GUI gui;
     private static CountDownLatch latch = new CountDownLatch(1);
 
     //    WAIT METHODS
@@ -52,45 +51,14 @@ public class Main {
         }
     }
 
-    public static void showGUI() {
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                StoryText storyText = new StoryText();
-                gui = new GUI(storyText);
-                latch.countDown();
-            }
-        });
-    }
-
 
     public static void main(String[] args) {
-//         TEST AREA
-//        _______________________________________________________________________________
-
-
-//        SwingUtilities.invokeLater(() -> {
-//                    GUI gui = new GUI(); // Creating GUI instance
-
-//                    gui.showWelcomeMessage(); // Display the welcome message in the GUI
-//                    String heroName = gui.askForHeroName(); // Get hero name from user via GUI
-//                });
-
-
-//        _________________________________________________________________________________
-
-//        showGUI(); GUI work in progress
-
-        try {
-            latch.await(); // Wait for the GUI to be initialized
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
 
 
         // GAME START
         System.out.println("_________________________________________________________");
         System.out.println("                       Welcome to                        ");
-        System.out.println("           ~~ \"H e r o  C o r r u p t e d\" ~~          ");
+        System.out.println("            ~~ \"H e r o  C o r r u p t e d\" ~~         ");
         System.out.println("                        A C T   1                        ");
         System.out.println("- Made by Jakob Kvejborg                                 ");
         System.out.println("_________________________________________________________");
@@ -174,18 +142,14 @@ public class Main {
                 System.exit(0);
             }
             // PRESS ENTER TO CONTINUE
-            System.out.println("Press 'ENTER' to continue...");
+            System.out.println("Press 'ENTER' to continue... \n");
 
 
             // __________________________________________________________________________________________________________________________________________________________________________________________//
             //                                                                             ENTER THE 3 WARLORDS
-            //      ACT 1
+            //                                                                                     ACT 1
 
-            RpgChar character = new RpgChar();
 
-// Create an Encounter using the character instance
-            Encounter encounter = new Encounter(character);
-            String choice = scanner.nextLine();  //
             WarlordFrame act1ForrestImage = null;
             WarlordFrame imageWarlordManda = null;
             WarlordFrame imageWarlordKoold = null;
@@ -374,7 +338,7 @@ public class Main {
                         System.out.println("2. Enter the tower and battle the nightmares inside.");
                         System.out.println("3. Ascend the tower and confront the horror that awaits you.");
                         if (healingWellCounter >= 16) {
-                            System.out.println("4. Only now you notice a well in the middle of street. Investigate it.");
+                            System.out.println("4. Only now you notice a well in the middle of the street. Investigate it.");
                         }
                         System.out.println("i. Open inventory.");
 
@@ -574,7 +538,7 @@ public class Main {
             System.out.println();
             System.out.println("                   The evil of this mountain has been slain by the hero.                         ");
             System.out.println("                    On the brink of madness, he fights through the pain.                         ");
-            System.out.println("                                  Was it all for nothing?                                        ");
+            System.out.println("                                       ..ꁝꑀ꒒ꈜꀷꁲꀷ?ꅐ                                               ");
             System.out.println("                                       A C T   4");
             System.out.println();
             System.out.println("_________________________________________________________________________________________________");
@@ -631,8 +595,8 @@ public class Main {
                         System.out.println("4. The tower still stands, enter it and defeat the nightmares inside.");
                         System.out.println("5. Enter the cold mountain pathwaths and fight the frost demons.");
                         System.out.println("6. Elite monsters have followed your trail and are now blocking the exit. Slay them.");
-                        System.out.println("7. Hellish fire burns from this portal.");
-                        System.out.println("8. This portal opens directly to Hell.");
+                        System.out.println("7. Red glowing eyes stare at you from beyond this portal.");
+                        System.out.println("8. This portal leads directly to Hell.");
 
                         if (finalBossCounter > 29) { // ensures message "you continue" doesn't play the first time around
                             System.out.println("9. ??????????");
